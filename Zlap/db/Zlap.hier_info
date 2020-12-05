@@ -1,0 +1,7 @@
+|Zlap
+CLK => Zo~reg0.CLK
+Z_EN => Zo~reg0.ENA
+Zi => Zo~reg0.DATAIN
+Zo <= Zo~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

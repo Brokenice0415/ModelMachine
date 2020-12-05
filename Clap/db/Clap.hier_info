@@ -1,0 +1,7 @@
+|Clap
+CLK => Co~reg0.CLK
+C_EN => Co~reg0.ENA
+Ci => Co~reg0.DATAIN
+Co <= Co~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

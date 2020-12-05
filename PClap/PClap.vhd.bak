@@ -1,0 +1,11 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity PClap is
+	port (LD_PC, IN_PC, CLK: in std_logic;
+			A: in std_logic_vector(7 downto 0);
+			C: out std_logic_vector(7 downto 0));
+end PClap;
+
+architecture struct of PClap is
+	

@@ -1,0 +1,12 @@
+library ieee, lcdf_vhdl;
+use ieee.std_logic_1164.all, lcdf_vhdl.func_prims.all;
+
+entity order is
+	port(EN: in std_logic;
+		  IR: in std_logic_vector(7 downto 0);
+		  MOVA, MOVB, MOVC, ALU, NOT0, SH,JMP, JZ,
+		  JC, IN0, OUT0, NOP, HEAL: in std_logic);
+end order;
+
+architecture struct of order is
+	

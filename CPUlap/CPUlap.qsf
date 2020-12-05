@@ -1,0 +1,466 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+# Date created = 16:14:27  December 09, 2019
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		CPUlap_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY Cyclone
+set_global_assignment -name DEVICE EP1C3T144C8
+set_global_assignment -name TOP_LEVEL_ENTITY CPUlap
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:14:27  DECEMBER 09, 2019"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name VECTOR_OUTPUT_FORMAT VWF
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to A
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to A[0]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to A[1]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to A[2]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to A[3]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to A[4]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to A[5]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to A[6]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to A[7]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to ADD
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Ai
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Ai[0]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Ai[1]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Ai[2]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Ai[3]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Ai[4]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Ai[5]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Ai[6]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Ai[7]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to ALU_M
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to ALU_S
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to ALU_S[0]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to ALU_S[1]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to ALU_S[2]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to ALU_S[3]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to ALUED
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to ALUED[0]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to ALUED[1]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to ALUED[2]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to ALUED[3]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to ALUED[4]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to ALUED[5]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to ALUED[6]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to ALUED[7]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to AND0
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Areg
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Areg[0]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Areg[1]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Areg[2]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Areg[3]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Areg[4]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Areg[5]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Areg[6]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Areg[7]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to B
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to B[0]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to B[1]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to B[2]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to B[3]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to B[4]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to B[5]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to B[6]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to B[7]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Bi
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Bi[0]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Bi[1]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Bi[2]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Bi[3]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Bi[4]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Bi[5]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Bi[6]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Bi[7]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Breg
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Breg[0]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Breg[1]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Breg[2]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Breg[3]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Breg[4]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Breg[5]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Breg[6]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Breg[7]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to C
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to C_EN
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to CLK
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Creg
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Creg[0]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Creg[1]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Creg[2]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Creg[3]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Creg[4]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Creg[5]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Creg[6]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Creg[7]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Data_In
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Data_In[0]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Data_In[1]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Data_In[2]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Data_In[3]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Data_In[4]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Data_In[5]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Data_In[6]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Data_In[7]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Data_Out
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Data_Out[0]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Data_Out[1]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Data_Out[2]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Data_Out[3]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Data_Out[4]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Data_Out[5]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Data_Out[6]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Data_Out[7]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to DL
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to FBUS
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to FL
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to FR
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to gdfx_temp0
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to gdfx_temp0[0]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to gdfx_temp0[1]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to gdfx_temp0[2]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to gdfx_temp0[3]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to gdfx_temp0[4]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to gdfx_temp0[5]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to gdfx_temp0[6]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to gdfx_temp0[7]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to HALT
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to IN0
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to INPC
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to "RAMlap:inst"
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to inst1
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to "Clap:inst2"
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to "order:inst3"
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to "IRlap:inst4"
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to "execute:inst5"
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to "PClap:inst6"
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to "Zlap:inst7"
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to "SHFlap:inst8"
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to "SMlap:inst9"
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to "SELECTlap:inst10"
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to inst11
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to inst11[0]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to inst11[1]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to inst11[2]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to inst11[3]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to inst11[4]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to inst11[5]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to inst11[6]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to inst11[7]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to inst12
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to inst13
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to inst13[0]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to inst13[1]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to inst13[2]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to inst13[3]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to inst13[4]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to inst13[5]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to inst13[6]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to inst13[7]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to "ALUlap:inst14"
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to "REGlap:inst15"
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to IRLD
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to JC
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to JMP
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to JZ
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to LDPC
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to MADD
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to MADD[0]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to MADD[1]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to MOVA
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to MOVB
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to MOVC
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to NOP
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to NOT0
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to OR0
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Order
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Order[0]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Order[1]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Order[2]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Order[3]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Order[4]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Order[5]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Order[6]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Order[7]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to OUT0
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to RA
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to RA[0]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to RA[1]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to SHL
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to SHR
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to SM
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to SM_EN
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to SUB
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to WA
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to WA[0]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to WA[1]
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to WE
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to XL
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Z
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Z_EN
+set_instance_assignment -name MUX_RESTRUCTURE OFF -to Zi
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to A
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to A[0]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to A[1]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to A[2]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to A[3]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to A[4]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to A[5]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to A[6]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to A[7]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to ADD
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Ai
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Ai[0]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Ai[1]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Ai[2]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Ai[3]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Ai[4]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Ai[5]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Ai[6]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Ai[7]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to ALU_M
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to ALU_S
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to ALU_S[0]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to ALU_S[1]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to ALU_S[2]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to ALU_S[3]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to ALUED
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to ALUED[0]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to ALUED[1]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to ALUED[2]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to ALUED[3]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to ALUED[4]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to ALUED[5]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to ALUED[6]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to ALUED[7]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to AND0
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Areg
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Areg[0]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Areg[1]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Areg[2]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Areg[3]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Areg[4]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Areg[5]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Areg[6]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Areg[7]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to B
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to B[0]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to B[1]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to B[2]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to B[3]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to B[4]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to B[5]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to B[6]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to B[7]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Bi
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Bi[0]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Bi[1]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Bi[2]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Bi[3]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Bi[4]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Bi[5]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Bi[6]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Bi[7]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Breg
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Breg[0]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Breg[1]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Breg[2]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Breg[3]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Breg[4]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Breg[5]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Breg[6]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Breg[7]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to C
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to C_EN
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to CLK
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Creg
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Creg[0]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Creg[1]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Creg[2]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Creg[3]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Creg[4]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Creg[5]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Creg[6]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Creg[7]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Data_In
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Data_In[0]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Data_In[1]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Data_In[2]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Data_In[3]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Data_In[4]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Data_In[5]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Data_In[6]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Data_In[7]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Data_Out
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Data_Out[0]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Data_Out[1]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Data_Out[2]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Data_Out[3]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Data_Out[4]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Data_Out[5]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Data_Out[6]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Data_Out[7]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to DL
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to FBUS
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to FL
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to FR
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to gdfx_temp0
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to gdfx_temp0[0]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to gdfx_temp0[1]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to gdfx_temp0[2]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to gdfx_temp0[3]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to gdfx_temp0[4]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to gdfx_temp0[5]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to gdfx_temp0[6]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to gdfx_temp0[7]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to HALT
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to IN0
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to INPC
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to "RAMlap:inst"
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to inst1
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to "Clap:inst2"
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to "order:inst3"
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to "IRlap:inst4"
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to "execute:inst5"
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to "PClap:inst6"
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to "Zlap:inst7"
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to "SHFlap:inst8"
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to "SMlap:inst9"
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to "SELECTlap:inst10"
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to inst11
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to inst11[0]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to inst11[1]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to inst11[2]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to inst11[3]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to inst11[4]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to inst11[5]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to inst11[6]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to inst11[7]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to inst12
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to inst13
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to inst13[0]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to inst13[1]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to inst13[2]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to inst13[3]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to inst13[4]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to inst13[5]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to inst13[6]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to inst13[7]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to "ALUlap:inst14"
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to "REGlap:inst15"
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to IRLD
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to JC
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to JMP
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to JZ
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to LDPC
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to MADD
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to MADD[0]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to MADD[1]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to MOVA
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to MOVB
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to MOVC
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to NOP
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to NOT0
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to OR0
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Order
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Order[0]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Order[1]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Order[2]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Order[3]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Order[4]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Order[5]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Order[6]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Order[7]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to OUT0
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to RA
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to RA[0]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to RA[1]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to SHL
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to SHR
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to SM
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to SM_EN
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to SUB
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to WA
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to WA[0]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to WA[1]
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to WE
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to XL
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Z
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Z_EN
+set_instance_assignment -name SETUP_HOLD_TIME_VIOLATION_DETECTION ON -to Zi
+set_global_assignment -name CYCLONE_OPTIMIZATION_TECHNIQUE BALANCED
+set_global_assignment -name VHDL_FILE ../Zlap/Zlap.vhd
+set_global_assignment -name VHDL_FILE ../SMlap/SMlap.vhd
+set_global_assignment -name VHDL_FILE ../SHFlap/SHFlap.vhd
+set_global_assignment -name BSF_FILE ../SELETlap/SELECTlap.bsf
+set_global_assignment -name VHDL_FILE ../SELETlap/SELECTlap.vhd
+set_global_assignment -name VHDL_FILE ../REGlap/REGlap.vhd
+set_global_assignment -name BDF_FILE ../RAMlap/RAMlap.bdf
+set_global_assignment -name VHDL_FILE ../PClap/PClap.vhd
+set_global_assignment -name VHDL_FILE ../order/order.vhd
+set_global_assignment -name VHDL_FILE ../IRlap/IRlap.vhd
+set_global_assignment -name VHDL_FILE ../execute/execute.vhd
+set_global_assignment -name VHDL_FILE ../Clap/Clap.vhd
+set_global_assignment -name VHDL_FILE ../ALUlap/ALUlap.vhd
+set_global_assignment -name BSF_FILE ../ALUlap/ALUlap.bsf
+set_global_assignment -name BSF_FILE ../Clap/Clap.bsf
+set_global_assignment -name BSF_FILE ../execute/execute.bsf
+set_global_assignment -name BSF_FILE ../IRlap/IRlap.bsf
+set_global_assignment -name BSF_FILE ../order/order.bsf
+set_global_assignment -name BSF_FILE ../PClap/PClap.bsf
+set_global_assignment -name BSF_FILE ../RAMlap/RAMlap.bsf
+set_global_assignment -name BSF_FILE ../REGlap/REGlap.bsf
+set_global_assignment -name BSF_FILE ../SHFlap/SHFlap.bsf
+set_global_assignment -name BSF_FILE ../SMlap/SMlap.bsf
+set_global_assignment -name BSF_FILE ../Zlap/Zlap.bsf
+set_global_assignment -name BDF_FILE CPUlap.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE CPUlap.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE CPUlap1.vwf
+set_global_assignment -name MIF_FILE CPUlap.mif
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/lap/Downloads/Quartus/Projects/CPU/CPUlap/CPUlap1.vwf"

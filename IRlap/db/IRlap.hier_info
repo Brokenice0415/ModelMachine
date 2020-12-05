@@ -1,0 +1,35 @@
+|IRlap
+IR_LD => IRo[0]~reg0.ENA
+IR_LD => IRo[1]~reg0.ENA
+IR_LD => IRo[2]~reg0.ENA
+IR_LD => IRo[3]~reg0.ENA
+IR_LD => IRo[4]~reg0.ENA
+IR_LD => IRo[5]~reg0.ENA
+IR_LD => IRo[6]~reg0.ENA
+IR_LD => IRo[7]~reg0.ENA
+CLK => IRo[0]~reg0.CLK
+CLK => IRo[1]~reg0.CLK
+CLK => IRo[2]~reg0.CLK
+CLK => IRo[3]~reg0.CLK
+CLK => IRo[4]~reg0.CLK
+CLK => IRo[5]~reg0.CLK
+CLK => IRo[6]~reg0.CLK
+CLK => IRo[7]~reg0.CLK
+IRi[0] => IRo[0]~reg0.DATAIN
+IRi[1] => IRo[1]~reg0.DATAIN
+IRi[2] => IRo[2]~reg0.DATAIN
+IRi[3] => IRo[3]~reg0.DATAIN
+IRi[4] => IRo[4]~reg0.DATAIN
+IRi[5] => IRo[5]~reg0.DATAIN
+IRi[6] => IRo[6]~reg0.DATAIN
+IRi[7] => IRo[7]~reg0.DATAIN
+IRo[0] <= IRo[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+IRo[1] <= IRo[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+IRo[2] <= IRo[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+IRo[3] <= IRo[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+IRo[4] <= IRo[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+IRo[5] <= IRo[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+IRo[6] <= IRo[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+IRo[7] <= IRo[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/lap/Downloads/Quartus/Projects/CPU/Clap/Clap.vhd
+source_file = 1, C:/Users/lap/Downloads/Quartus/Projects/CPU/Clap/Clap.vwf
+source_file = 1, C:/Users/lap/Downloads/Quartus/Projects/CPU/Clap/db/Clap.cbx.xml
+source_file = 1, c:/users/lap/downloads/quartus/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/users/lap/downloads/quartus/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/users/lap/downloads/quartus/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/users/lap/downloads/quartus/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = Clap
+instance = comp, \CLK~I , CLK, Clap, 1
+instance = comp, \C_EN~I , C_EN, Clap, 1
+instance = comp, \Ci~I , Ci, Clap, 1
+instance = comp, \Co~reg0 , Co~reg0, Clap, 1
+instance = comp, \Co~I , Co, Clap, 1

@@ -1,0 +1,54 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity ALUlap is
+	port (A, B: in std_logic_vector(7 downto 0);
+			S: in std_logic_vector(3 downto 0);
+			M: in std_logic;
+			T: out std_logic_vector(7 downto 0);
+			CF, ZF: out std_logic);
+end ALUlap;
+
+architecture struct of ALUlap is
+	signal carry: std_logic_vector(7 downto 0);
+	
+	begin
+	process(S,M,A,B)
+	begin
+		
+		if(M = '0')then
+			T = "ZZZZZZZZ";
+			CF = '0';
+			ZF = '0';
+		elsif(S(0) = '1')then--加
+			T(0) = A(0) xor B(0);
+			carry(0) = A(0) and B(0);
+			for i in 1 to 7 loop
+				T(i) = (A(i) xor B(i)) xor carry(i-1);
+				carry(i) = (A(i) and B(i)) or (carry(i-1) and (A(i) xor B(i)));
+			end loop;
+			CF <=  carry(7);
+			ZF <= '0'
+		elsif(S(1) = '1')then--减
+			B(7) = not B(7);
+			T(0) = A(0) xor B(0);
+			carry(0) = A(0) and B(0);
+			for i in 1 to 7 loop
+				T(i) = (A(i) xor B(i)) xor carry(i-1);
+				carry(i) = (A(i) and B(i)) or (carry(i-1) and (A(i) xor B(i)));
+			end loop;
+			CF0 :=  carry(7);
+			ZF <= '0';
+		elsif(S(2) = '1')then
+			T = A and B;
+			CF <= '0';
+			ZF <= '0';
+		elsif(S(3) = '1')then
+			T = not A;
+		else 
+			T = "ZZZZZZZZ";
+			CF = '0';
+			ZF = '0';
+		end if;
+	end process;
+end struct;

@@ -1,0 +1,12 @@
+Fitter Status : Successful - Sat Dec 21 00:25:16 2019
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : ALUlap
+Top-level Entity Name : ALUlap
+Family : Cyclone
+Device : EP1C3T144C8
+Timing Models : Final
+Total logic elements : 62 / 2,910 ( 2 % )
+Total pins : 31 / 104 ( 30 % )
+Total virtual pins : 0
+Total memory bits : 0 / 59,904 ( 0 % )
+Total PLLs : 0 / 1 ( 0 % )

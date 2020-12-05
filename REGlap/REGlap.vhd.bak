@@ -1,0 +1,6 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity REGlap is
+	port(WE, CLK: in std_logic;
+		  

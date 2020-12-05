@@ -1,0 +1,6 @@
+|SMlap
+CLK => temp.CLK
+EN => temp.ENA
+SM <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+

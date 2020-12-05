@@ -1,0 +1,12 @@
+Fitter Status : Successful - Sat Dec 21 09:43:40 2019
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : CPUlap
+Top-level Entity Name : CPUlap
+Family : Cyclone
+Device : EP1C3T144C8
+Timing Models : Final
+Total logic elements : 259 / 2,910 ( 9 % )
+Total pins : 50 / 104 ( 48 % )
+Total virtual pins : 0
+Total memory bits : 2,048 / 59,904 ( 3 % )
+Total PLLs : 0 / 1 ( 0 % )

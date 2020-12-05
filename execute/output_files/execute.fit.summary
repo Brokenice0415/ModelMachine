@@ -1,0 +1,12 @@
+Fitter Status : Successful - Mon Oct 28 23:59:36 2019
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : execute
+Top-level Entity Name : execute
+Family : Cyclone
+Device : EP1C3T144C8
+Timing Models : Final
+Total logic elements : 15 / 2,910 ( < 1 % )
+Total pins : 51 / 104 ( 49 % )
+Total virtual pins : 0
+Total memory bits : 0 / 59,904 ( 0 % )
+Total PLLs : 0 / 1 ( 0 % )

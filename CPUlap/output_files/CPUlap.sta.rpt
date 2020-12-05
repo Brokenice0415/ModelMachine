@@ -1,0 +1,835 @@
+TimeQuest Timing Analyzer report for CPUlap
+Sat Dec 21 09:43:47 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'CLK'
+ 12. Hold: 'CLK'
+ 13. Minimum Pulse Width: 'CLK'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Propagation Delay
+ 19. Minimum Propagation Delay
+ 20. Output Enable Times
+ 21. Minimum Output Enable Times
+ 22. Output Disable Times
+ 23. Minimum Output Disable Times
+ 24. Setup Transfers
+ 25. Hold Transfers
+ 26. Report TCCS
+ 27. Report RSKM
+ 28. Unconstrained Paths
+ 29. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                       ;
++--------------------+--------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version ;
+; Revision Name      ; CPUlap                                                             ;
+; Device Family      ; Cyclone                                                            ;
+; Device Name        ; EP1C3T144C8                                                        ;
+; Timing Models      ; Final                                                              ;
+; Delay Model        ; Slow Model                                                         ;
+; Rise/Fall Delays   ; Unavailable                                                        ;
++--------------------+--------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; CLK        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-------------------------------------------------+
+; Fmax Summary                                    ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 38.72 MHz ; 38.72 MHz       ; CLK        ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------+
+; Setup Summary                   ;
++-------+---------+---------------+
+; Clock ; Slack   ; End Point TNS ;
++-------+---------+---------------+
+; CLK   ; -12.418 ; -674.011      ;
++-------+---------+---------------+
+
+
++-------------------------------+
+; Hold Summary                  ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLK   ; 1.325 ; 0.000         ;
++-------+-------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++--------------------------------+
+; Minimum Pulse Width Summary    ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CLK   ; -1.583 ; -180.831      ;
++-------+--------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'CLK'                                                                                                                                                                                                                                                                                                                                 ;
++---------+-------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node                                                                                                                     ; To Node                                                                                                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+-------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -12.418 ; REGlap:inst15|inA[3]                                                                                                          ; PClap:inst6|prevPC[6]                                                                                                        ; CLK          ; CLK         ; 1.000        ; -0.042     ; 13.339     ;
+; -12.413 ; REGlap:inst15|inA[3]                                                                                                          ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg1 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.831     ;
+; -12.386 ; IRlap:inst4|IRo[0]                                                                                                            ; PClap:inst6|prevPC[6]                                                                                                        ; CLK          ; CLK         ; 1.000        ; -0.042     ; 13.307     ;
+; -12.381 ; IRlap:inst4|IRo[0]                                                                                                            ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg1 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.799     ;
+; -12.362 ; REGlap:inst15|inA[3]                                                                                                          ; REGlap:inst15|inC[6]                                                                                                         ; CLK          ; CLK         ; 1.000        ; 0.000      ; 13.325     ;
+; -12.349 ; REGlap:inst15|inA[3]                                                                                                          ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg4 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.767     ;
+; -12.330 ; IRlap:inst4|IRo[0]                                                                                                            ; REGlap:inst15|inC[6]                                                                                                         ; CLK          ; CLK         ; 1.000        ; 0.000      ; 13.293     ;
+; -12.166 ; IRlap:inst4|IRo[0]                                                                                                            ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg7 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.584     ;
+; -12.151 ; REGlap:inst15|inA[5]                                                                                                          ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg7 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.569     ;
+; -12.120 ; REGlap:inst15|inB[3]                                                                                                          ; PClap:inst6|prevPC[6]                                                                                                        ; CLK          ; CLK         ; 1.000        ; -0.042     ; 13.041     ;
+; -12.115 ; REGlap:inst15|inB[3]                                                                                                          ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg1 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.533     ;
+; -12.091 ; REGlap:inst15|inB[1]                                                                                                          ; PClap:inst6|prevPC[6]                                                                                                        ; CLK          ; CLK         ; 1.000        ; -0.042     ; 13.012     ;
+; -12.086 ; REGlap:inst15|inB[1]                                                                                                          ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg1 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.504     ;
+; -12.067 ; IRlap:inst4|IRo[0]                                                                                                            ; REGlap:inst15|inA[0]                                                                                                         ; CLK          ; CLK         ; 1.000        ; 0.000      ; 13.030     ;
+; -12.064 ; REGlap:inst15|inB[3]                                                                                                          ; REGlap:inst15|inC[6]                                                                                                         ; CLK          ; CLK         ; 1.000        ; 0.000      ; 13.027     ;
+; -12.052 ; REGlap:inst15|inA[5]                                                                                                          ; REGlap:inst15|inA[0]                                                                                                         ; CLK          ; CLK         ; 1.000        ; 0.000      ; 13.015     ;
+; -12.049 ; REGlap:inst15|inB[3]                                                                                                          ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg4 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.467     ;
+; -12.047 ; IRlap:inst4|IRo[2]                                                                                                            ; PClap:inst6|prevPC[6]                                                                                                        ; CLK          ; CLK         ; 1.000        ; -0.042     ; 12.968     ;
+; -12.042 ; IRlap:inst4|IRo[2]                                                                                                            ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg1 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.460     ;
+; -12.036 ; IRlap:inst4|IRo[0]                                                                                                            ; REGlap:inst15|inA[7]                                                                                                         ; CLK          ; CLK         ; 1.000        ; -0.039     ; 12.960     ;
+; -12.035 ; IRlap:inst4|IRo[0]                                                                                                            ; REGlap:inst15|inB[7]                                                                                                         ; CLK          ; CLK         ; 1.000        ; -0.039     ; 12.959     ;
+; -12.035 ; REGlap:inst15|inB[1]                                                                                                          ; REGlap:inst15|inC[6]                                                                                                         ; CLK          ; CLK         ; 1.000        ; 0.000      ; 12.998     ;
+; -12.024 ; REGlap:inst15|inB[1]                                                                                                          ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg4 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.442     ;
+; -12.021 ; REGlap:inst15|inA[5]                                                                                                          ; REGlap:inst15|inA[7]                                                                                                         ; CLK          ; CLK         ; 1.000        ; -0.039     ; 12.945     ;
+; -12.020 ; REGlap:inst15|inA[5]                                                                                                          ; REGlap:inst15|inB[7]                                                                                                         ; CLK          ; CLK         ; 1.000        ; -0.039     ; 12.944     ;
+; -12.008 ; IRlap:inst4|IRo[0]                                                                                                            ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg4 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.426     ;
+; -12.008 ; IRlap:inst4|IRo[0]                                                                                                            ; REGlap:inst15|inC[7]                                                                                                         ; CLK          ; CLK         ; 1.000        ; 0.000      ; 12.971     ;
+; -12.005 ; IRlap:inst4|IRo[0]                                                                                                            ; IRlap:inst4|IRo[7]                                                                                                           ; CLK          ; CLK         ; 1.000        ; 0.000      ; 12.968     ;
+; -11.999 ; IRlap:inst4|IRo[3]                                                                                                            ; PClap:inst6|prevPC[6]                                                                                                        ; CLK          ; CLK         ; 1.000        ; -0.042     ; 12.920     ;
+; -11.994 ; IRlap:inst4|IRo[3]                                                                                                            ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg1 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.412     ;
+; -11.993 ; REGlap:inst15|inA[5]                                                                                                          ; REGlap:inst15|inC[7]                                                                                                         ; CLK          ; CLK         ; 1.000        ; 0.000      ; 12.956     ;
+; -11.991 ; IRlap:inst4|IRo[2]                                                                                                            ; REGlap:inst15|inC[6]                                                                                                         ; CLK          ; CLK         ; 1.000        ; 0.000      ; 12.954     ;
+; -11.990 ; REGlap:inst15|inA[5]                                                                                                          ; IRlap:inst4|IRo[7]                                                                                                           ; CLK          ; CLK         ; 1.000        ; 0.000      ; 12.953     ;
+; -11.985 ; REGlap:inst15|inA[4]                                                                                                          ; PClap:inst6|prevPC[6]                                                                                                        ; CLK          ; CLK         ; 1.000        ; -0.003     ; 12.945     ;
+; -11.985 ; REGlap:inst15|inA[5]                                                                                                          ; PClap:inst6|prevPC[6]                                                                                                        ; CLK          ; CLK         ; 1.000        ; -0.042     ; 12.906     ;
+; -11.980 ; REGlap:inst15|inA[4]                                                                                                          ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg1 ; CLK          ; CLK         ; 0.500        ; 0.050      ; 12.437     ;
+; -11.980 ; REGlap:inst15|inA[5]                                                                                                          ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg1 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.398     ;
+; -11.962 ; REGlap:inst15|inA[0]                                                                                                          ; PClap:inst6|prevPC[6]                                                                                                        ; CLK          ; CLK         ; 1.000        ; -0.042     ; 12.883     ;
+; -11.957 ; REGlap:inst15|inA[0]                                                                                                          ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg1 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.375     ;
+; -11.949 ; REGlap:inst15|inA[3]                                                                                                          ; PClap:inst6|prevPC[3]                                                                                                        ; CLK          ; CLK         ; 1.000        ; -0.042     ; 12.870     ;
+; -11.943 ; IRlap:inst4|IRo[3]                                                                                                            ; REGlap:inst15|inC[6]                                                                                                         ; CLK          ; CLK         ; 1.000        ; 0.000      ; 12.906     ;
+; -11.943 ; REGlap:inst15|inC[0]                                                                                                          ; PClap:inst6|prevPC[6]                                                                                                        ; CLK          ; CLK         ; 1.000        ; -0.042     ; 12.864     ;
+; -11.938 ; REGlap:inst15|inC[0]                                                                                                          ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg1 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.356     ;
+; -11.931 ; REGlap:inst15|inA[3]                                                                                                          ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg7 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.349     ;
+; -11.931 ; REGlap:inst15|inA[1]                                                                                                          ; PClap:inst6|prevPC[6]                                                                                                        ; CLK          ; CLK         ; 1.000        ; -0.042     ; 12.852     ;
+; -11.929 ; REGlap:inst15|inA[4]                                                                                                          ; REGlap:inst15|inC[6]                                                                                                         ; CLK          ; CLK         ; 1.000        ; 0.039      ; 12.931     ;
+; -11.929 ; REGlap:inst15|inA[5]                                                                                                          ; REGlap:inst15|inC[6]                                                                                                         ; CLK          ; CLK         ; 1.000        ; 0.000      ; 12.892     ;
+; -11.926 ; REGlap:inst15|inA[1]                                                                                                          ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg1 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.344     ;
+; -11.911 ; REGlap:inst15|inA[3]                                                                                                          ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg2 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.329     ;
+; -11.906 ; REGlap:inst15|inA[0]                                                                                                          ; REGlap:inst15|inC[6]                                                                                                         ; CLK          ; CLK         ; 1.000        ; 0.000      ; 12.869     ;
+; -11.899 ; REGlap:inst15|inA[0]                                                                                                          ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg4 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.317     ;
+; -11.895 ; REGlap:inst15|inB[0]                                                                                                          ; PClap:inst6|prevPC[6]                                                                                                        ; CLK          ; CLK         ; 1.000        ; -0.042     ; 12.816     ;
+; -11.890 ; REGlap:inst15|inB[0]                                                                                                          ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg1 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.308     ;
+; -11.887 ; REGlap:inst15|inC[0]                                                                                                          ; REGlap:inst15|inC[6]                                                                                                         ; CLK          ; CLK         ; 1.000        ; 0.000      ; 12.850     ;
+; -11.878 ; REGlap:inst15|inC[0]                                                                                                          ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg4 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.296     ;
+; -11.875 ; REGlap:inst15|inA[1]                                                                                                          ; REGlap:inst15|inC[6]                                                                                                         ; CLK          ; CLK         ; 1.000        ; 0.000      ; 12.838     ;
+; -11.868 ; REGlap:inst15|inC[4]                                                                                                          ; PClap:inst6|prevPC[6]                                                                                                        ; CLK          ; CLK         ; 1.000        ; -0.042     ; 12.789     ;
+; -11.866 ; REGlap:inst15|inA[1]                                                                                                          ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg4 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.284     ;
+; -11.863 ; REGlap:inst15|inC[4]                                                                                                          ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg1 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.281     ;
+; -11.862 ; REGlap:inst15|inA[2]                                                                                                          ; PClap:inst6|prevPC[6]                                                                                                        ; CLK          ; CLK         ; 1.000        ; -0.042     ; 12.783     ;
+; -11.857 ; REGlap:inst15|inA[2]                                                                                                          ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg1 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.275     ;
+; -11.849 ; IRlap:inst4|IRo[2]                                                                                                            ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg4 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.267     ;
+; -11.847 ; IRlap:inst4|IRo[0]                                                                                                            ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg2 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.265     ;
+; -11.843 ; IRlap:inst4|IRo[2]                                                                                                            ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg7 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.261     ;
+; -11.839 ; REGlap:inst15|inB[0]                                                                                                          ; REGlap:inst15|inC[6]                                                                                                         ; CLK          ; CLK         ; 1.000        ; 0.000      ; 12.802     ;
+; -11.832 ; REGlap:inst15|inA[3]                                                                                                          ; REGlap:inst15|inA[0]                                                                                                         ; CLK          ; CLK         ; 1.000        ; 0.000      ; 12.795     ;
+; -11.830 ; REGlap:inst15|inB[0]                                                                                                          ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg4 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.248     ;
+; -11.827 ; REGlap:inst15|inA[3]                                                                                                          ; PClap:inst6|prevPC[4]                                                                                                        ; CLK          ; CLK         ; 1.000        ; -0.042     ; 12.748     ;
+; -11.823 ; IRlap:inst4|IRo[5]                                                                                                            ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg7 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.241     ;
+; -11.812 ; REGlap:inst15|inC[4]                                                                                                          ; REGlap:inst15|inC[6]                                                                                                         ; CLK          ; CLK         ; 1.000        ; 0.000      ; 12.775     ;
+; -11.806 ; REGlap:inst15|inA[2]                                                                                                          ; REGlap:inst15|inC[6]                                                                                                         ; CLK          ; CLK         ; 1.000        ; 0.000      ; 12.769     ;
+; -11.801 ; REGlap:inst15|inA[3]                                                                                                          ; REGlap:inst15|inA[7]                                                                                                         ; CLK          ; CLK         ; 1.000        ; -0.039     ; 12.725     ;
+; -11.800 ; REGlap:inst15|inA[3]                                                                                                          ; REGlap:inst15|inB[7]                                                                                                         ; CLK          ; CLK         ; 1.000        ; -0.039     ; 12.724     ;
+; -11.795 ; IRlap:inst4|IRo[0]                                                                                                            ; PClap:inst6|prevPC[4]                                                                                                        ; CLK          ; CLK         ; 1.000        ; -0.042     ; 12.716     ;
+; -11.793 ; REGlap:inst15|inA[2]                                                                                                          ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg4 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.211     ;
+; -11.773 ; REGlap:inst15|inA[3]                                                                                                          ; REGlap:inst15|inC[7]                                                                                                         ; CLK          ; CLK         ; 1.000        ; 0.000      ; 12.736     ;
+; -11.770 ; REGlap:inst15|inA[3]                                                                                                          ; IRlap:inst4|IRo[7]                                                                                                           ; CLK          ; CLK         ; 1.000        ; 0.000      ; 12.733     ;
+; -11.763 ; REGlap:inst15|inA[3]                                                                                                          ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg3 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.181     ;
+; -11.751 ; REGlap:inst15|inC[1]                                                                                                          ; PClap:inst6|prevPC[6]                                                                                                        ; CLK          ; CLK         ; 1.000        ; -0.042     ; 12.672     ;
+; -11.746 ; REGlap:inst15|inC[1]                                                                                                          ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg1 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.164     ;
+; -11.745 ; IRlap:inst4|IRo[5]                                                                                                            ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg5 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.163     ;
+; -11.744 ; IRlap:inst4|IRo[2]                                                                                                            ; REGlap:inst15|inA[0]                                                                                                         ; CLK          ; CLK         ; 1.000        ; 0.000      ; 12.707     ;
+; -11.737 ; REGlap:inst15|inA[3]                                                                                                          ; PClap:inst6|prevPC[5]                                                                                                        ; CLK          ; CLK         ; 1.000        ; -0.042     ; 12.658     ;
+; -11.731 ; IRlap:inst4|IRo[0]                                                                                                            ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg3 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.149     ;
+; -11.724 ; IRlap:inst4|IRo[5]                                                                                                            ; REGlap:inst15|inA[0]                                                                                                         ; CLK          ; CLK         ; 1.000        ; 0.000      ; 12.687     ;
+; -11.719 ; IRlap:inst4|IRo[7]                                                                                                            ; PClap:inst6|prevPC[6]                                                                                                        ; CLK          ; CLK         ; 1.000        ; -0.042     ; 12.640     ;
+; -11.714 ; IRlap:inst4|IRo[7]                                                                                                            ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg1 ; CLK          ; CLK         ; 0.500        ; 0.011      ; 12.132     ;
+; -11.713 ; IRlap:inst4|IRo[2]                                                                                                            ; REGlap:inst15|inA[7]                                                                                                         ; CLK          ; CLK         ; 1.000        ; -0.039     ; 12.637     ;
+; -11.712 ; IRlap:inst4|IRo[2]                                                                                                            ; REGlap:inst15|inB[7]                                                                                                         ; CLK          ; CLK         ; 1.000        ; -0.039     ; 12.636     ;
+; -11.706 ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg0 ; REGlap:inst15|inA[0]                                                                                                         ; CLK          ; CLK         ; 0.500        ; -0.011     ; 12.158     ;
+; -11.706 ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg1 ; REGlap:inst15|inA[0]                                                                                                         ; CLK          ; CLK         ; 0.500        ; -0.011     ; 12.158     ;
+; -11.706 ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg2 ; REGlap:inst15|inA[0]                                                                                                         ; CLK          ; CLK         ; 0.500        ; -0.011     ; 12.158     ;
+; -11.706 ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg3 ; REGlap:inst15|inA[0]                                                                                                         ; CLK          ; CLK         ; 0.500        ; -0.011     ; 12.158     ;
+; -11.706 ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg4 ; REGlap:inst15|inA[0]                                                                                                         ; CLK          ; CLK         ; 0.500        ; -0.011     ; 12.158     ;
+; -11.706 ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg5 ; REGlap:inst15|inA[0]                                                                                                         ; CLK          ; CLK         ; 0.500        ; -0.011     ; 12.158     ;
+; -11.706 ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg6 ; REGlap:inst15|inA[0]                                                                                                         ; CLK          ; CLK         ; 0.500        ; -0.011     ; 12.158     ;
+; -11.706 ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg7 ; REGlap:inst15|inA[0]                                                                                                         ; CLK          ; CLK         ; 0.500        ; -0.011     ; 12.158     ;
+; -11.705 ; IRlap:inst4|IRo[0]                                                                                                            ; REGlap:inst15|inC[0]                                                                                                         ; CLK          ; CLK         ; 1.000        ; 0.000      ; 12.668     ;
+; -11.704 ; IRlap:inst4|IRo[0]                                                                                                            ; REGlap:inst15|inB[0]                                                                                                         ; CLK          ; CLK         ; 1.000        ; 0.000      ; 12.667     ;
+; -11.704 ; REGlap:inst15|inB[1]                                                                                                          ; PClap:inst6|prevPC[4]                                                                                                        ; CLK          ; CLK         ; 1.000        ; -0.042     ; 12.625     ;
++---------+-------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'CLK'                                                                                                                                                                                                                                                                                                                                ;
++-------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                                                                    ; To Node                                                                                                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.325 ; PClap:inst6|prevPC[4]                                                                                                        ; PClap:inst6|prevPC[4]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.340      ;
+; 1.326 ; PClap:inst6|prevPC[5]                                                                                                        ; PClap:inst6|prevPC[5]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.341      ;
+; 1.328 ; Clap:inst2|Co                                                                                                                ; Clap:inst2|Co                                                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.343      ;
+; 1.331 ; PClap:inst6|prevPC[0]                                                                                                        ; PClap:inst6|prevPC[0]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.346      ;
+; 1.469 ; Zlap:inst7|Zo                                                                                                                ; Zlap:inst7|Zo                                                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.484      ;
+; 1.480 ; PClap:inst6|prevPC[2]                                                                                                        ; PClap:inst6|prevPC[2]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.495      ;
+; 1.480 ; PClap:inst6|prevPC[7]                                                                                                        ; PClap:inst6|prevPC[7]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.495      ;
+; 1.487 ; PClap:inst6|prevPC[1]                                                                                                        ; PClap:inst6|prevPC[1]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.502      ;
+; 1.487 ; PClap:inst6|prevPC[6]                                                                                                        ; PClap:inst6|prevPC[6]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.502      ;
+; 1.925 ; PClap:inst6|prevPC[5]                                                                                                        ; PClap:inst6|prevPC[6]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.940      ;
+; 1.930 ; PClap:inst6|prevPC[0]                                                                                                        ; PClap:inst6|prevPC[1]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.945      ;
+; 2.003 ; PClap:inst6|prevPC[5]                                                                                                        ; PClap:inst6|prevPC[7]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.018      ;
+; 2.008 ; PClap:inst6|prevPC[0]                                                                                                        ; PClap:inst6|prevPC[2]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.023      ;
+; 2.086 ; PClap:inst6|prevPC[0]                                                                                                        ; PClap:inst6|prevPC[3]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.101      ;
+; 2.089 ; PClap:inst6|prevPC[2]                                                                                                        ; PClap:inst6|prevPC[3]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.104      ;
+; 2.096 ; PClap:inst6|prevPC[6]                                                                                                        ; PClap:inst6|prevPC[7]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.111      ;
+; 2.096 ; PClap:inst6|prevPC[1]                                                                                                        ; PClap:inst6|prevPC[2]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.111      ;
+; 2.105 ; PClap:inst6|prevPC[3]                                                                                                        ; PClap:inst6|prevPC[3]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.120      ;
+; 2.140 ; PClap:inst6|prevPC[4]                                                                                                        ; PClap:inst6|prevPC[5]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.155      ;
+; 2.140 ; PClap:inst6|prevPC[4]                                                                                                        ; PClap:inst6|prevPC[6]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.155      ;
+; 2.140 ; PClap:inst6|prevPC[4]                                                                                                        ; PClap:inst6|prevPC[7]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.155      ;
+; 2.164 ; PClap:inst6|prevPC[0]                                                                                                        ; PClap:inst6|prevPC[4]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.179      ;
+; 2.167 ; PClap:inst6|prevPC[2]                                                                                                        ; PClap:inst6|prevPC[4]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.182      ;
+; 2.174 ; PClap:inst6|prevPC[1]                                                                                                        ; PClap:inst6|prevPC[3]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.189      ;
+; 2.252 ; PClap:inst6|prevPC[1]                                                                                                        ; PClap:inst6|prevPC[4]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.267      ;
+; 2.392 ; PClap:inst6|prevPC[0]                                                                                                        ; PClap:inst6|prevPC[5]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.407      ;
+; 2.392 ; PClap:inst6|prevPC[0]                                                                                                        ; PClap:inst6|prevPC[6]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.407      ;
+; 2.392 ; PClap:inst6|prevPC[0]                                                                                                        ; PClap:inst6|prevPC[7]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.407      ;
+; 2.393 ; PClap:inst6|prevPC[2]                                                                                                        ; PClap:inst6|prevPC[5]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.408      ;
+; 2.393 ; PClap:inst6|prevPC[2]                                                                                                        ; PClap:inst6|prevPC[6]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.408      ;
+; 2.393 ; PClap:inst6|prevPC[2]                                                                                                        ; PClap:inst6|prevPC[7]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.408      ;
+; 2.395 ; SMlap:inst9|temp                                                                                                             ; IRlap:inst4|IRo[5]                                                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.410      ;
+; 2.480 ; PClap:inst6|prevPC[1]                                                                                                        ; PClap:inst6|prevPC[5]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.495      ;
+; 2.480 ; PClap:inst6|prevPC[1]                                                                                                        ; PClap:inst6|prevPC[6]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.495      ;
+; 2.480 ; PClap:inst6|prevPC[1]                                                                                                        ; PClap:inst6|prevPC[7]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.495      ;
+; 2.704 ; PClap:inst6|prevPC[3]                                                                                                        ; PClap:inst6|prevPC[4]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.719      ;
+; 2.853 ; SMlap:inst9|temp                                                                                                             ; IRlap:inst4|IRo[3]                                                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.868      ;
+; 2.853 ; SMlap:inst9|temp                                                                                                             ; IRlap:inst4|IRo[2]                                                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.868      ;
+; 2.926 ; PClap:inst6|prevPC[3]                                                                                                        ; PClap:inst6|prevPC[5]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.941      ;
+; 2.926 ; PClap:inst6|prevPC[3]                                                                                                        ; PClap:inst6|prevPC[6]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.941      ;
+; 2.926 ; PClap:inst6|prevPC[3]                                                                                                        ; PClap:inst6|prevPC[7]                                                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.941      ;
+; 3.082 ; IRlap:inst4|IRo[5]                                                                                                           ; Clap:inst2|Co                                                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.097      ;
+; 3.391 ; SMlap:inst9|temp                                                                                                             ; IRlap:inst4|IRo[4]                                                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.406      ;
+; 3.393 ; IRlap:inst4|IRo[5]                                                                                                           ; Zlap:inst7|Zo                                                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.408      ;
+; 3.457 ; SMlap:inst9|temp                                                                                                             ; IRlap:inst4|IRo[0]                                                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.472      ;
+; 3.548 ; SMlap:inst9|temp                                                                                                             ; IRlap:inst4|IRo[1]                                                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.563      ;
+; 3.548 ; SMlap:inst9|temp                                                                                                             ; IRlap:inst4|IRo[7]                                                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.563      ;
+; 3.598 ; SMlap:inst9|temp                                                                                                             ; Zlap:inst7|Zo                                                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.613      ;
+; 3.713 ; IRlap:inst4|IRo[6]                                                                                                           ; IRlap:inst4|IRo[6]                                                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.728      ;
+; 3.739 ; IRlap:inst4|IRo[6]                                                                                                           ; Clap:inst2|Co                                                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.754      ;
+; 3.797 ; SMlap:inst9|temp                                                                                                             ; IRlap:inst4|IRo[6]                                                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.812      ;
+; 3.923 ; IRlap:inst4|IRo[6]                                                                                                           ; Zlap:inst7|Zo                                                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.938      ;
+; 3.972 ; SMlap:inst9|temp                                                                                                             ; SMlap:inst9|temp                                                                                                              ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.987      ;
+; 3.974 ; IRlap:inst4|IRo[5]                                                                                                           ; IRlap:inst4|IRo[6]                                                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.989      ;
+; 3.998 ; IRlap:inst4|IRo[6]                                                                                                           ; IRlap:inst4|IRo[0]                                                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.013      ;
+; 4.099 ; IRlap:inst4|IRo[5]                                                                                                           ; IRlap:inst4|IRo[0]                                                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.114      ;
+; 4.101 ; SMlap:inst9|temp                                                                                                             ; Clap:inst2|Co                                                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.116      ;
+; 4.302 ; IRlap:inst4|IRo[4]                                                                                                           ; IRlap:inst4|IRo[4]                                                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.317      ;
+; 4.351 ; PClap:inst6|prevPC[1]                                                                                                        ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg1 ; CLK          ; CLK         ; -0.500       ; 0.053      ; 3.959      ;
+; 4.427 ; IRlap:inst4|IRo[1]                                                                                                           ; Clap:inst2|Co                                                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.442      ;
+; 4.459 ; PClap:inst6|prevPC[5]                                                                                                        ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg5 ; CLK          ; CLK         ; -0.500       ; 0.053      ; 4.067      ;
+; 4.460 ; PClap:inst6|prevPC[4]                                                                                                        ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg4 ; CLK          ; CLK         ; -0.500       ; 0.053      ; 4.068      ;
+; 4.492 ; SMlap:inst9|temp                                                                                                             ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg5 ; CLK          ; CLK         ; -0.500       ; 0.011      ; 4.058      ;
+; 4.498 ; SMlap:inst9|temp                                                                                                             ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg1 ; CLK          ; CLK         ; -0.500       ; 0.011      ; 4.064      ;
+; 4.500 ; SMlap:inst9|temp                                                                                                             ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg4 ; CLK          ; CLK         ; -0.500       ; 0.011      ; 4.066      ;
+; 4.501 ; SMlap:inst9|temp                                                                                                             ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg3 ; CLK          ; CLK         ; -0.500       ; 0.011      ; 4.067      ;
+; 4.506 ; IRlap:inst4|IRo[4]                                                                                                           ; Zlap:inst7|Zo                                                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.521      ;
+; 4.515 ; SMlap:inst9|temp                                                                                                             ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_we_reg       ; CLK          ; CLK         ; -0.500       ; 0.011      ; 4.081      ;
+; 4.549 ; IRlap:inst4|IRo[4]                                                                                                           ; Clap:inst2|Co                                                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.564      ;
+; 4.626 ; IRlap:inst4|IRo[4]                                                                                                           ; IRlap:inst4|IRo[6]                                                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.641      ;
+; 4.764 ; REGlap:inst15|inC[4]                                                                                                         ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg4 ; CLK          ; CLK         ; -0.500       ; 0.011      ; 4.330      ;
+; 4.802 ; PClap:inst6|prevPC[3]                                                                                                        ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg3 ; CLK          ; CLK         ; -0.500       ; 0.053      ; 4.410      ;
+; 4.838 ; IRlap:inst4|IRo[3]                                                                                                           ; REGlap:inst15|inC[0]                                                                                                          ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.853      ;
+; 4.838 ; IRlap:inst4|IRo[3]                                                                                                           ; REGlap:inst15|inC[1]                                                                                                          ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.853      ;
+; 4.857 ; IRlap:inst4|IRo[3]                                                                                                           ; REGlap:inst15|inC[6]                                                                                                          ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.872      ;
+; 4.857 ; IRlap:inst4|IRo[3]                                                                                                           ; REGlap:inst15|inC[7]                                                                                                          ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.872      ;
+; 4.857 ; IRlap:inst4|IRo[3]                                                                                                           ; REGlap:inst15|inC[4]                                                                                                          ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.872      ;
+; 4.857 ; IRlap:inst4|IRo[3]                                                                                                           ; REGlap:inst15|inC[3]                                                                                                          ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.872      ;
+; 4.857 ; IRlap:inst4|IRo[3]                                                                                                           ; REGlap:inst15|inC[2]                                                                                                          ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.872      ;
+; 4.869 ; REGlap:inst15|inC[3]                                                                                                         ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg3 ; CLK          ; CLK         ; -0.500       ; 0.011      ; 4.435      ;
+; 4.928 ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg0 ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_memory_reg0  ; CLK          ; CLK         ; 0.000        ; -0.014     ; 4.969      ;
+; 4.928 ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg1 ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_memory_reg1  ; CLK          ; CLK         ; 0.000        ; -0.014     ; 4.969      ;
+; 4.928 ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg2 ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_memory_reg2  ; CLK          ; CLK         ; 0.000        ; -0.014     ; 4.969      ;
+; 4.928 ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg3 ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_memory_reg3  ; CLK          ; CLK         ; 0.000        ; -0.014     ; 4.969      ;
+; 4.928 ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg4 ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_memory_reg4  ; CLK          ; CLK         ; 0.000        ; -0.014     ; 4.969      ;
+; 4.928 ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg5 ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_memory_reg5  ; CLK          ; CLK         ; 0.000        ; -0.014     ; 4.969      ;
+; 4.928 ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg6 ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_memory_reg6  ; CLK          ; CLK         ; 0.000        ; -0.014     ; 4.969      ;
+; 4.928 ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg7 ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_memory_reg7  ; CLK          ; CLK         ; 0.000        ; -0.014     ; 4.969      ;
+; 4.930 ; IRlap:inst4|IRo[6]                                                                                                           ; REGlap:inst15|inB[6]                                                                                                          ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.945      ;
+; 4.932 ; IRlap:inst4|IRo[6]                                                                                                           ; REGlap:inst15|inA[6]                                                                                                          ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.947      ;
+; 4.950 ; SMlap:inst9|temp                                                                                                             ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg6 ; CLK          ; CLK         ; -0.500       ; 0.011      ; 4.516      ;
+; 4.954 ; REGlap:inst15|inB[4]                                                                                                         ; Zlap:inst7|Zo                                                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.039      ; 5.008      ;
+; 4.964 ; IRlap:inst4|IRo[0]                                                                                                           ; Clap:inst2|Co                                                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.979      ;
+; 4.998 ; IRlap:inst4|IRo[4]                                                                                                           ; IRlap:inst4|IRo[0]                                                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 5.013      ;
+; 4.999 ; IRlap:inst4|IRo[7]                                                                                                           ; Clap:inst2|Co                                                                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 5.014      ;
+; 5.014 ; SMlap:inst9|temp                                                                                                             ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg2 ; CLK          ; CLK         ; -0.500       ; 0.011      ; 4.580      ;
+; 5.091 ; SMlap:inst9|temp                                                                                                             ; REGlap:inst15|inB[5]                                                                                                          ; CLK          ; CLK         ; 0.000        ; 0.000      ; 5.106      ;
+; 5.107 ; IRlap:inst4|IRo[5]                                                                                                           ; IRlap:inst4|IRo[2]                                                                                                            ; CLK          ; CLK         ; 0.000        ; 0.000      ; 5.122      ;
+; 5.124 ; SMlap:inst9|temp                                                                                                             ; REGlap:inst15|inC[5]                                                                                                          ; CLK          ; CLK         ; 0.000        ; 0.000      ; 5.139      ;
+; 5.124 ; SMlap:inst9|temp                                                                                                             ; REGlap:inst15|inA[5]                                                                                                          ; CLK          ; CLK         ; 0.000        ; 0.000      ; 5.139      ;
++-------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'CLK'                                                                                                                                                                                     ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                                                        ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------------------------------------------------------------------+
+; -1.583 ; 1.000        ; 2.583          ; Port Rate        ; CLK   ; Rise       ; CLK                                                                                                                           ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Fall       ; Clap:inst2|Co                                                                                                                 ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Fall       ; Clap:inst2|Co                                                                                                                 ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Fall       ; IRlap:inst4|IRo[0]                                                                                                            ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Fall       ; IRlap:inst4|IRo[0]                                                                                                            ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Fall       ; IRlap:inst4|IRo[1]                                                                                                            ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Fall       ; IRlap:inst4|IRo[1]                                                                                                            ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Fall       ; IRlap:inst4|IRo[2]                                                                                                            ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Fall       ; IRlap:inst4|IRo[2]                                                                                                            ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Fall       ; IRlap:inst4|IRo[3]                                                                                                            ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Fall       ; IRlap:inst4|IRo[3]                                                                                                            ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Fall       ; IRlap:inst4|IRo[4]                                                                                                            ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Fall       ; IRlap:inst4|IRo[4]                                                                                                            ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Fall       ; IRlap:inst4|IRo[5]                                                                                                            ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Fall       ; IRlap:inst4|IRo[5]                                                                                                            ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Fall       ; IRlap:inst4|IRo[6]                                                                                                            ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Fall       ; IRlap:inst4|IRo[6]                                                                                                            ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Fall       ; IRlap:inst4|IRo[7]                                                                                                            ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Fall       ; IRlap:inst4|IRo[7]                                                                                                            ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Fall       ; PClap:inst6|prevPC[0]                                                                                                         ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Fall       ; PClap:inst6|prevPC[0]                                                                                                         ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Fall       ; PClap:inst6|prevPC[1]                                                                                                         ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Fall       ; PClap:inst6|prevPC[1]                                                                                                         ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Fall       ; PClap:inst6|prevPC[2]                                                                                                         ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Fall       ; PClap:inst6|prevPC[2]                                                                                                         ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Fall       ; PClap:inst6|prevPC[3]                                                                                                         ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Fall       ; PClap:inst6|prevPC[3]                                                                                                         ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Fall       ; PClap:inst6|prevPC[4]                                                                                                         ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Fall       ; PClap:inst6|prevPC[4]                                                                                                         ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Fall       ; PClap:inst6|prevPC[5]                                                                                                         ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Fall       ; PClap:inst6|prevPC[5]                                                                                                         ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Fall       ; PClap:inst6|prevPC[6]                                                                                                         ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Fall       ; PClap:inst6|prevPC[6]                                                                                                         ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Fall       ; PClap:inst6|prevPC[7]                                                                                                         ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Fall       ; PClap:inst6|prevPC[7]                                                                                                         ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg0 ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg0 ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg1 ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg1 ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg2 ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg2 ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg3 ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg3 ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg4 ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg4 ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg5 ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg5 ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg6 ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg6 ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg7 ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_address_reg7 ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg0  ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg0  ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg1  ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg1  ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg2  ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg2  ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg3  ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg3  ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg4  ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg4  ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg5  ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg5  ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg6  ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg6  ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg7  ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_datain_reg7  ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_memory_reg0  ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_memory_reg0  ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_memory_reg1  ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_memory_reg1  ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_memory_reg2  ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_memory_reg2  ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_memory_reg3  ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_memory_reg3  ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_memory_reg4  ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_memory_reg4  ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_memory_reg5  ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_memory_reg5  ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_memory_reg6  ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_memory_reg6  ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_memory_reg7  ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_memory_reg7  ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_we_reg       ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Rise       ; RAMlap:inst|lpm_ram_io:RAMlap|altram:sram|altsyncram:ram_block|altsyncram_4ce1:auto_generated|ram_block1a7~porta_we_reg       ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Fall       ; REGlap:inst15|inA[0]                                                                                                          ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Fall       ; REGlap:inst15|inA[0]                                                                                                          ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Fall       ; REGlap:inst15|inA[1]                                                                                                          ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Fall       ; REGlap:inst15|inA[1]                                                                                                          ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Fall       ; REGlap:inst15|inA[2]                                                                                                          ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Fall       ; REGlap:inst15|inA[2]                                                                                                          ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Fall       ; REGlap:inst15|inA[3]                                                                                                          ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Fall       ; REGlap:inst15|inA[3]                                                                                                          ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Fall       ; REGlap:inst15|inA[4]                                                                                                          ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Fall       ; REGlap:inst15|inA[4]                                                                                                          ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Fall       ; REGlap:inst15|inA[5]                                                                                                          ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Fall       ; REGlap:inst15|inA[5]                                                                                                          ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Fall       ; REGlap:inst15|inA[6]                                                                                                          ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; CLK   ; Fall       ; REGlap:inst15|inA[6]                                                                                                          ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; CLK   ; Fall       ; REGlap:inst15|inA[7]                                                                                                          ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data_In[*]  ; CLK        ; 10.944 ; 10.944 ; Rise       ; CLK             ;
+;  Data_In[0] ; CLK        ; 10.813 ; 10.813 ; Rise       ; CLK             ;
+;  Data_In[1] ; CLK        ; 10.533 ; 10.533 ; Rise       ; CLK             ;
+;  Data_In[2] ; CLK        ; 10.519 ; 10.519 ; Rise       ; CLK             ;
+;  Data_In[3] ; CLK        ; 10.944 ; 10.944 ; Rise       ; CLK             ;
+;  Data_In[4] ; CLK        ; 9.759  ; 9.759  ; Rise       ; CLK             ;
+;  Data_In[5] ; CLK        ; 9.756  ; 9.756  ; Rise       ; CLK             ;
+;  Data_In[6] ; CLK        ; 10.077 ; 10.077 ; Rise       ; CLK             ;
+;  Data_In[7] ; CLK        ; 7.916  ; 7.916  ; Rise       ; CLK             ;
+; Data_In[*]  ; CLK        ; 11.214 ; 11.214 ; Fall       ; CLK             ;
+;  Data_In[0] ; CLK        ; 11.214 ; 11.214 ; Fall       ; CLK             ;
+;  Data_In[1] ; CLK        ; 10.568 ; 10.568 ; Fall       ; CLK             ;
+;  Data_In[2] ; CLK        ; 10.599 ; 10.599 ; Fall       ; CLK             ;
+;  Data_In[3] ; CLK        ; 11.044 ; 11.044 ; Fall       ; CLK             ;
+;  Data_In[4] ; CLK        ; 10.323 ; 10.323 ; Fall       ; CLK             ;
+;  Data_In[5] ; CLK        ; 10.082 ; 10.082 ; Fall       ; CLK             ;
+;  Data_In[6] ; CLK        ; 10.582 ; 10.582 ; Fall       ; CLK             ;
+;  Data_In[7] ; CLK        ; 8.800  ; 8.800  ; Fall       ; CLK             ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++-------------+------------+---------+---------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise    ; Fall    ; Clock Edge ; Clock Reference ;
++-------------+------------+---------+---------+------------+-----------------+
+; Data_In[*]  ; CLK        ; -7.471  ; -7.471  ; Rise       ; CLK             ;
+;  Data_In[0] ; CLK        ; -9.986  ; -9.986  ; Rise       ; CLK             ;
+;  Data_In[1] ; CLK        ; -9.947  ; -9.947  ; Rise       ; CLK             ;
+;  Data_In[2] ; CLK        ; -10.076 ; -10.076 ; Rise       ; CLK             ;
+;  Data_In[3] ; CLK        ; -10.257 ; -10.257 ; Rise       ; CLK             ;
+;  Data_In[4] ; CLK        ; -9.315  ; -9.315  ; Rise       ; CLK             ;
+;  Data_In[5] ; CLK        ; -9.201  ; -9.201  ; Rise       ; CLK             ;
+;  Data_In[6] ; CLK        ; -9.633  ; -9.633  ; Rise       ; CLK             ;
+;  Data_In[7] ; CLK        ; -7.471  ; -7.471  ; Rise       ; CLK             ;
+; Data_In[*]  ; CLK        ; -8.063  ; -8.063  ; Fall       ; CLK             ;
+;  Data_In[0] ; CLK        ; -8.167  ; -8.167  ; Fall       ; CLK             ;
+;  Data_In[1] ; CLK        ; -9.565  ; -9.565  ; Fall       ; CLK             ;
+;  Data_In[2] ; CLK        ; -8.171  ; -8.171  ; Fall       ; CLK             ;
+;  Data_In[3] ; CLK        ; -9.108  ; -9.108  ; Fall       ; CLK             ;
+;  Data_In[4] ; CLK        ; -8.179  ; -8.179  ; Fall       ; CLK             ;
+;  Data_In[5] ; CLK        ; -8.797  ; -8.797  ; Fall       ; CLK             ;
+;  Data_In[6] ; CLK        ; -8.171  ; -8.171  ; Fall       ; CLK             ;
+;  Data_In[7] ; CLK        ; -8.063  ; -8.063  ; Fall       ; CLK             ;
++-------------+------------+---------+---------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data_Out[*]  ; CLK        ; 17.037 ; 17.037 ; Rise       ; CLK             ;
+;  Data_Out[0] ; CLK        ; 17.037 ; 17.037 ; Rise       ; CLK             ;
+;  Data_Out[1] ; CLK        ; 15.878 ; 15.878 ; Rise       ; CLK             ;
+;  Data_Out[2] ; CLK        ; 15.713 ; 15.713 ; Rise       ; CLK             ;
+;  Data_Out[3] ; CLK        ; 16.946 ; 16.946 ; Rise       ; CLK             ;
+;  Data_Out[4] ; CLK        ; 15.806 ; 15.806 ; Rise       ; CLK             ;
+;  Data_Out[5] ; CLK        ; 16.027 ; 16.027 ; Rise       ; CLK             ;
+;  Data_Out[6] ; CLK        ; 15.852 ; 15.852 ; Rise       ; CLK             ;
+;  Data_Out[7] ; CLK        ; 14.068 ; 14.068 ; Rise       ; CLK             ;
+; Areg[*]      ; CLK        ; 7.792  ; 7.792  ; Fall       ; CLK             ;
+;  Areg[0]     ; CLK        ; 7.392  ; 7.392  ; Fall       ; CLK             ;
+;  Areg[1]     ; CLK        ; 7.373  ; 7.373  ; Fall       ; CLK             ;
+;  Areg[2]     ; CLK        ; 7.774  ; 7.774  ; Fall       ; CLK             ;
+;  Areg[3]     ; CLK        ; 7.291  ; 7.291  ; Fall       ; CLK             ;
+;  Areg[4]     ; CLK        ; 7.196  ; 7.196  ; Fall       ; CLK             ;
+;  Areg[5]     ; CLK        ; 7.403  ; 7.403  ; Fall       ; CLK             ;
+;  Areg[6]     ; CLK        ; 7.792  ; 7.792  ; Fall       ; CLK             ;
+;  Areg[7]     ; CLK        ; 7.321  ; 7.321  ; Fall       ; CLK             ;
+; Breg[*]      ; CLK        ; 8.158  ; 8.158  ; Fall       ; CLK             ;
+;  Breg[0]     ; CLK        ; 7.242  ; 7.242  ; Fall       ; CLK             ;
+;  Breg[1]     ; CLK        ; 8.158  ; 8.158  ; Fall       ; CLK             ;
+;  Breg[2]     ; CLK        ; 6.973  ; 6.973  ; Fall       ; CLK             ;
+;  Breg[3]     ; CLK        ; 7.292  ; 7.292  ; Fall       ; CLK             ;
+;  Breg[4]     ; CLK        ; 7.332  ; 7.332  ; Fall       ; CLK             ;
+;  Breg[5]     ; CLK        ; 7.328  ; 7.328  ; Fall       ; CLK             ;
+;  Breg[6]     ; CLK        ; 6.918  ; 6.918  ; Fall       ; CLK             ;
+;  Breg[7]     ; CLK        ; 7.338  ; 7.338  ; Fall       ; CLK             ;
+; Creg[*]      ; CLK        ; 8.528  ; 8.528  ; Fall       ; CLK             ;
+;  Creg[0]     ; CLK        ; 7.629  ; 7.629  ; Fall       ; CLK             ;
+;  Creg[1]     ; CLK        ; 8.171  ; 8.171  ; Fall       ; CLK             ;
+;  Creg[2]     ; CLK        ; 7.279  ; 7.279  ; Fall       ; CLK             ;
+;  Creg[3]     ; CLK        ; 8.202  ; 8.202  ; Fall       ; CLK             ;
+;  Creg[4]     ; CLK        ; 7.380  ; 7.380  ; Fall       ; CLK             ;
+;  Creg[5]     ; CLK        ; 8.132  ; 8.132  ; Fall       ; CLK             ;
+;  Creg[6]     ; CLK        ; 6.999  ; 6.999  ; Fall       ; CLK             ;
+;  Creg[7]     ; CLK        ; 8.528  ; 8.528  ; Fall       ; CLK             ;
+; Data_Out[*]  ; CLK        ; 18.107 ; 18.107 ; Fall       ; CLK             ;
+;  Data_Out[0] ; CLK        ; 17.898 ; 17.898 ; Fall       ; CLK             ;
+;  Data_Out[1] ; CLK        ; 16.470 ; 16.470 ; Fall       ; CLK             ;
+;  Data_Out[2] ; CLK        ; 16.299 ; 16.299 ; Fall       ; CLK             ;
+;  Data_Out[3] ; CLK        ; 18.107 ; 18.107 ; Fall       ; CLK             ;
+;  Data_Out[4] ; CLK        ; 17.317 ; 17.317 ; Fall       ; CLK             ;
+;  Data_Out[5] ; CLK        ; 17.529 ; 17.529 ; Fall       ; CLK             ;
+;  Data_Out[6] ; CLK        ; 17.486 ; 17.486 ; Fall       ; CLK             ;
+;  Data_Out[7] ; CLK        ; 17.217 ; 17.217 ; Fall       ; CLK             ;
+; Order[*]     ; CLK        ; 7.789  ; 7.789  ; Fall       ; CLK             ;
+;  Order[0]    ; CLK        ; 7.371  ; 7.371  ; Fall       ; CLK             ;
+;  Order[1]    ; CLK        ; 7.614  ; 7.614  ; Fall       ; CLK             ;
+;  Order[2]    ; CLK        ; 7.350  ; 7.350  ; Fall       ; CLK             ;
+;  Order[3]    ; CLK        ; 7.789  ; 7.789  ; Fall       ; CLK             ;
+;  Order[4]    ; CLK        ; 7.786  ; 7.786  ; Fall       ; CLK             ;
+;  Order[5]    ; CLK        ; 7.331  ; 7.331  ; Fall       ; CLK             ;
+;  Order[6]    ; CLK        ; 7.680  ; 7.680  ; Fall       ; CLK             ;
+;  Order[7]    ; CLK        ; 7.687  ; 7.687  ; Fall       ; CLK             ;
+; SM           ; CLK        ; 7.901  ; 7.901  ; Fall       ; CLK             ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data_Out[*]  ; CLK        ; 13.771 ; 13.771 ; Rise       ; CLK             ;
+;  Data_Out[0] ; CLK        ; 16.358 ; 16.358 ; Rise       ; CLK             ;
+;  Data_Out[1] ; CLK        ; 15.440 ; 15.440 ; Rise       ; CLK             ;
+;  Data_Out[2] ; CLK        ; 15.418 ; 15.418 ; Rise       ; CLK             ;
+;  Data_Out[3] ; CLK        ; 16.407 ; 16.407 ; Rise       ; CLK             ;
+;  Data_Out[4] ; CLK        ; 15.510 ; 15.510 ; Rise       ; CLK             ;
+;  Data_Out[5] ; CLK        ; 15.620 ; 15.620 ; Rise       ; CLK             ;
+;  Data_Out[6] ; CLK        ; 15.556 ; 15.556 ; Rise       ; CLK             ;
+;  Data_Out[7] ; CLK        ; 13.771 ; 13.771 ; Rise       ; CLK             ;
+; Areg[*]      ; CLK        ; 7.196  ; 7.196  ; Fall       ; CLK             ;
+;  Areg[0]     ; CLK        ; 7.392  ; 7.392  ; Fall       ; CLK             ;
+;  Areg[1]     ; CLK        ; 7.373  ; 7.373  ; Fall       ; CLK             ;
+;  Areg[2]     ; CLK        ; 7.774  ; 7.774  ; Fall       ; CLK             ;
+;  Areg[3]     ; CLK        ; 7.291  ; 7.291  ; Fall       ; CLK             ;
+;  Areg[4]     ; CLK        ; 7.196  ; 7.196  ; Fall       ; CLK             ;
+;  Areg[5]     ; CLK        ; 7.403  ; 7.403  ; Fall       ; CLK             ;
+;  Areg[6]     ; CLK        ; 7.792  ; 7.792  ; Fall       ; CLK             ;
+;  Areg[7]     ; CLK        ; 7.321  ; 7.321  ; Fall       ; CLK             ;
+; Breg[*]      ; CLK        ; 6.918  ; 6.918  ; Fall       ; CLK             ;
+;  Breg[0]     ; CLK        ; 7.242  ; 7.242  ; Fall       ; CLK             ;
+;  Breg[1]     ; CLK        ; 8.158  ; 8.158  ; Fall       ; CLK             ;
+;  Breg[2]     ; CLK        ; 6.973  ; 6.973  ; Fall       ; CLK             ;
+;  Breg[3]     ; CLK        ; 7.292  ; 7.292  ; Fall       ; CLK             ;
+;  Breg[4]     ; CLK        ; 7.332  ; 7.332  ; Fall       ; CLK             ;
+;  Breg[5]     ; CLK        ; 7.328  ; 7.328  ; Fall       ; CLK             ;
+;  Breg[6]     ; CLK        ; 6.918  ; 6.918  ; Fall       ; CLK             ;
+;  Breg[7]     ; CLK        ; 7.338  ; 7.338  ; Fall       ; CLK             ;
+; Creg[*]      ; CLK        ; 6.999  ; 6.999  ; Fall       ; CLK             ;
+;  Creg[0]     ; CLK        ; 7.629  ; 7.629  ; Fall       ; CLK             ;
+;  Creg[1]     ; CLK        ; 8.171  ; 8.171  ; Fall       ; CLK             ;
+;  Creg[2]     ; CLK        ; 7.279  ; 7.279  ; Fall       ; CLK             ;
+;  Creg[3]     ; CLK        ; 8.202  ; 8.202  ; Fall       ; CLK             ;
+;  Creg[4]     ; CLK        ; 7.380  ; 7.380  ; Fall       ; CLK             ;
+;  Creg[5]     ; CLK        ; 8.132  ; 8.132  ; Fall       ; CLK             ;
+;  Creg[6]     ; CLK        ; 6.999  ; 6.999  ; Fall       ; CLK             ;
+;  Creg[7]     ; CLK        ; 8.528  ; 8.528  ; Fall       ; CLK             ;
+; Data_Out[*]  ; CLK        ; 9.896  ; 9.896  ; Fall       ; CLK             ;
+;  Data_Out[0] ; CLK        ; 11.197 ; 11.197 ; Fall       ; CLK             ;
+;  Data_Out[1] ; CLK        ; 10.393 ; 10.393 ; Fall       ; CLK             ;
+;  Data_Out[2] ; CLK        ; 10.391 ; 10.391 ; Fall       ; CLK             ;
+;  Data_Out[3] ; CLK        ; 12.157 ; 12.157 ; Fall       ; CLK             ;
+;  Data_Out[4] ; CLK        ; 10.640 ; 10.640 ; Fall       ; CLK             ;
+;  Data_Out[5] ; CLK        ; 10.761 ; 10.761 ; Fall       ; CLK             ;
+;  Data_Out[6] ; CLK        ; 9.896  ; 9.896  ; Fall       ; CLK             ;
+;  Data_Out[7] ; CLK        ; 10.457 ; 10.457 ; Fall       ; CLK             ;
+; Order[*]     ; CLK        ; 7.331  ; 7.331  ; Fall       ; CLK             ;
+;  Order[0]    ; CLK        ; 7.371  ; 7.371  ; Fall       ; CLK             ;
+;  Order[1]    ; CLK        ; 7.614  ; 7.614  ; Fall       ; CLK             ;
+;  Order[2]    ; CLK        ; 7.350  ; 7.350  ; Fall       ; CLK             ;
+;  Order[3]    ; CLK        ; 7.789  ; 7.789  ; Fall       ; CLK             ;
+;  Order[4]    ; CLK        ; 7.786  ; 7.786  ; Fall       ; CLK             ;
+;  Order[5]    ; CLK        ; 7.331  ; 7.331  ; Fall       ; CLK             ;
+;  Order[6]    ; CLK        ; 7.680  ; 7.680  ; Fall       ; CLK             ;
+;  Order[7]    ; CLK        ; 7.687  ; 7.687  ; Fall       ; CLK             ;
+; SM           ; CLK        ; 7.901  ; 7.901  ; Fall       ; CLK             ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------+
+; Propagation Delay                                    ;
++------------+-------------+--------+----+----+--------+
+; Input Port ; Output Port ; RR     ; RF ; FR ; FF     ;
++------------+-------------+--------+----+----+--------+
+; Data_In[0] ; Data_Out[0] ; 16.045 ;    ;    ; 16.045 ;
+; Data_In[1] ; Data_Out[1] ; 15.005 ;    ;    ; 15.005 ;
+; Data_In[2] ; Data_Out[2] ; 14.573 ;    ;    ; 14.573 ;
+; Data_In[3] ; Data_Out[3] ; 16.202 ;    ;    ; 16.202 ;
+; Data_In[4] ; Data_Out[4] ; 14.813 ;    ;    ; 14.813 ;
+; Data_In[5] ; Data_Out[5] ; 14.874 ;    ;    ; 14.874 ;
+; Data_In[6] ; Data_Out[6] ; 14.650 ;    ;    ; 14.650 ;
+; Data_In[7] ; Data_Out[7] ; 12.981 ;    ;    ; 12.981 ;
++------------+-------------+--------+----+----+--------+
+
+
++------------------------------------------------------+
+; Minimum Propagation Delay                            ;
++------------+-------------+--------+----+----+--------+
+; Input Port ; Output Port ; RR     ; RF ; FR ; FF     ;
++------------+-------------+--------+----+----+--------+
+; Data_In[0] ; Data_Out[0] ; 15.366 ;    ;    ; 15.366 ;
+; Data_In[1] ; Data_Out[1] ; 14.567 ;    ;    ; 14.567 ;
+; Data_In[2] ; Data_Out[2] ; 14.278 ;    ;    ; 14.278 ;
+; Data_In[3] ; Data_Out[3] ; 15.663 ;    ;    ; 15.663 ;
+; Data_In[4] ; Data_Out[4] ; 14.517 ;    ;    ; 14.517 ;
+; Data_In[5] ; Data_Out[5] ; 14.467 ;    ;    ; 14.467 ;
+; Data_In[6] ; Data_Out[6] ; 14.354 ;    ;    ; 14.354 ;
+; Data_In[7] ; Data_Out[7] ; 12.684 ;    ;    ; 12.684 ;
++------------+-------------+--------+----+----+--------+
+
+
++--------------------------------------------------------------------------+
+; Output Enable Times                                                      ;
++--------------+------------+--------+------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+------+------------+-----------------+
+; Data_Out[*]  ; CLK        ; 10.460 ;      ; Fall       ; CLK             ;
+;  Data_Out[0] ; CLK        ; 10.460 ;      ; Fall       ; CLK             ;
+;  Data_Out[1] ; CLK        ; 10.465 ;      ; Fall       ; CLK             ;
+;  Data_Out[2] ; CLK        ; 10.460 ;      ; Fall       ; CLK             ;
+;  Data_Out[3] ; CLK        ; 10.947 ;      ; Fall       ; CLK             ;
+;  Data_Out[4] ; CLK        ; 11.351 ;      ; Fall       ; CLK             ;
+;  Data_Out[5] ; CLK        ; 11.193 ;      ; Fall       ; CLK             ;
+;  Data_Out[6] ; CLK        ; 10.465 ;      ; Fall       ; CLK             ;
+;  Data_Out[7] ; CLK        ; 11.193 ;      ; Fall       ; CLK             ;
++--------------+------------+--------+------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Output Enable Times                                             ;
++--------------+------------+-------+------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+------+------------+-----------------+
+; Data_Out[*]  ; CLK        ; 8.456 ;      ; Fall       ; CLK             ;
+;  Data_Out[0] ; CLK        ; 8.456 ;      ; Fall       ; CLK             ;
+;  Data_Out[1] ; CLK        ; 8.461 ;      ; Fall       ; CLK             ;
+;  Data_Out[2] ; CLK        ; 8.456 ;      ; Fall       ; CLK             ;
+;  Data_Out[3] ; CLK        ; 8.943 ;      ; Fall       ; CLK             ;
+;  Data_Out[4] ; CLK        ; 9.347 ;      ; Fall       ; CLK             ;
+;  Data_Out[5] ; CLK        ; 9.189 ;      ; Fall       ; CLK             ;
+;  Data_Out[6] ; CLK        ; 8.461 ;      ; Fall       ; CLK             ;
+;  Data_Out[7] ; CLK        ; 9.189 ;      ; Fall       ; CLK             ;
++--------------+------------+-------+------+------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Output Disable Times                                                             ;
++--------------+------------+-----------+-----------+------------+-----------------+
+; Data Port    ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++--------------+------------+-----------+-----------+------------+-----------------+
+; Data_Out[*]  ; CLK        ; 10.460    ;           ; Fall       ; CLK             ;
+;  Data_Out[0] ; CLK        ; 10.460    ;           ; Fall       ; CLK             ;
+;  Data_Out[1] ; CLK        ; 10.465    ;           ; Fall       ; CLK             ;
+;  Data_Out[2] ; CLK        ; 10.460    ;           ; Fall       ; CLK             ;
+;  Data_Out[3] ; CLK        ; 10.947    ;           ; Fall       ; CLK             ;
+;  Data_Out[4] ; CLK        ; 11.351    ;           ; Fall       ; CLK             ;
+;  Data_Out[5] ; CLK        ; 11.193    ;           ; Fall       ; CLK             ;
+;  Data_Out[6] ; CLK        ; 10.465    ;           ; Fall       ; CLK             ;
+;  Data_Out[7] ; CLK        ; 11.193    ;           ; Fall       ; CLK             ;
++--------------+------------+-----------+-----------+------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Minimum Output Disable Times                                                     ;
++--------------+------------+-----------+-----------+------------+-----------------+
+; Data Port    ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++--------------+------------+-----------+-----------+------------+-----------------+
+; Data_Out[*]  ; CLK        ; 8.456     ;           ; Fall       ; CLK             ;
+;  Data_Out[0] ; CLK        ; 8.456     ;           ; Fall       ; CLK             ;
+;  Data_Out[1] ; CLK        ; 8.461     ;           ; Fall       ; CLK             ;
+;  Data_Out[2] ; CLK        ; 8.456     ;           ; Fall       ; CLK             ;
+;  Data_Out[3] ; CLK        ; 8.943     ;           ; Fall       ; CLK             ;
+;  Data_Out[4] ; CLK        ; 9.347     ;           ; Fall       ; CLK             ;
+;  Data_Out[5] ; CLK        ; 9.189     ;           ; Fall       ; CLK             ;
+;  Data_Out[6] ; CLK        ; 8.461     ;           ; Fall       ; CLK             ;
+;  Data_Out[7] ; CLK        ; 9.189     ;           ; Fall       ; CLK             ;
++--------------+------------+-----------+-----------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 136      ; 7363     ; 640      ; 39877    ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 136      ; 7363     ; 640      ; 39877    ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 8     ; 8    ;
+; Unconstrained Input Port Paths  ; 56    ; 56   ;
+; Unconstrained Output Ports      ; 41    ; 41   ;
+; Unconstrained Output Port Paths ; 340   ; 340  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Sat Dec 21 09:43:45 2019
+Info: Command: quartus_sta CPUlap -c CPUlap
+Info: qsta_default_script.tcl version: #1
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'CPUlap.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLK CLK
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -12.418
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):   -12.418      -674.011 CLK 
+Info (332146): Worst-case hold slack is 1.325
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     1.325         0.000 CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.583
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.583      -180.831 CLK 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 473 megabytes
+    Info: Processing ended: Sat Dec 21 09:43:47 2019
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

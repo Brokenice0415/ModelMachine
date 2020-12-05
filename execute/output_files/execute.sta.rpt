@@ -1,0 +1,309 @@
+TimeQuest Timing Analyzer report for execute
+Mon Oct 28 23:59:46 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Propagation Delay
+ 12. Minimum Propagation Delay
+ 13. Clock Transfers
+ 14. Report TCCS
+ 15. Report RSKM
+ 16. Unconstrained Paths
+ 17. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                       ;
++--------------------+--------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version ;
+; Revision Name      ; execute                                                            ;
+; Device Family      ; Cyclone                                                            ;
+; Device Name        ; EP1C3T144C8                                                        ;
+; Timing Models      ; Final                                                              ;
+; Delay Model        ; Slow Model                                                         ;
+; Rise/Fall Delays   ; Unavailable                                                        ;
++--------------------+--------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
+----------
+; Clocks ;
+----------
+No clocks to report.
+
+
+----------------
+; Fmax Summary ;
+----------------
+No paths to report.
+
+
+-----------------
+; Setup Summary ;
+-----------------
+No paths to report.
+
+
+----------------
+; Hold Summary ;
+----------------
+No paths to report.
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
+-------------------------------
+; Minimum Pulse Width Summary ;
+-------------------------------
+No paths to report.
+
+
++------------------------------------------------------+
+; Propagation Delay                                    ;
++------------+-------------+--------+----+----+--------+
+; Input Port ; Output Port ; RR     ; RF ; FR ; FF     ;
++------------+-------------+--------+----+----+--------+
+; ADD        ; ALU_M       ; 12.616 ;    ;    ; 12.616 ;
+; ADD        ; ALU_S[3]    ; 8.998  ;    ;    ; 8.998  ;
+; ADD        ; GENERAL_WE  ; 13.006 ;    ;    ; 13.006 ;
+; AND0       ; ALU_M       ; 8.187  ;    ;    ; 8.187  ;
+; AND0       ; ALU_S[1]    ; 4.895  ;    ;    ; 4.895  ;
+; AND0       ; GENERAL_WE  ; 8.577  ;    ;    ; 8.577  ;
+; C          ; CF_EN       ; 11.638 ;    ;    ; 11.638 ;
+; C          ; PC_INC      ; 12.367 ;    ;    ; 12.367 ;
+; C          ; PC_LD       ; 11.858 ;    ;    ; 11.858 ;
+; HALT       ; SM_EN       ; 9.421  ;    ;    ; 9.421  ;
+; JC         ; PC_INC      ; 11.347 ;    ;    ; 11.347 ;
+; JC         ; PC_LD       ; 11.660 ;    ;    ; 11.660 ;
+; JC         ; RAM_CS      ; 11.181 ;    ;    ; 11.181 ;
+; JC         ; RAM_RL      ; 13.559 ;    ;    ; 13.559 ;
+; JC         ; RAM_WL      ; 13.613 ;    ;    ; 13.613 ;
+; JMP        ; PC_LD       ; 10.170 ;    ;    ; 10.170 ;
+; JMP        ; RAM_CS      ; 10.536 ;    ;    ; 10.536 ;
+; JMP        ; RAM_RL      ; 12.914 ;    ;    ; 12.914 ;
+; JMP        ; RAM_WL      ; 12.968 ;    ;    ; 12.968 ;
+; JZ         ; PC_LD       ; 12.131 ;    ;    ; 12.131 ;
+; JZ         ; RAM_CS      ; 11.654 ;    ;    ; 11.654 ;
+; JZ         ; RAM_RL      ; 14.032 ;    ;    ; 14.032 ;
+; JZ         ; RAM_WL      ; 14.086 ;    ;    ; 14.086 ;
+; MOVA       ; GENERAL_WE  ; 11.179 ;    ;    ; 11.179 ;
+; MOVB       ; GENERAL_WE  ; 11.469 ;    ;    ; 11.469 ;
+; MOVB       ; RAM_WL      ; 10.753 ;    ;    ; 10.753 ;
+; MOVC       ; GENERAL_WE  ; 11.214 ;    ;    ; 11.214 ;
+; MOVC       ; RAM_RL      ; 11.977 ;    ;    ; 11.977 ;
+; NOT0       ; ALU_M       ; 7.775  ;    ;    ; 7.775  ;
+; NOT0       ; ALU_S[0]    ; 5.092  ;    ;    ; 5.092  ;
+; NOT0       ; GENERAL_WE  ; 8.165  ;    ;    ; 8.165  ;
+; SHL        ; GENERAL_WE  ; 11.251 ;    ;    ; 11.251 ;
+; SHL        ; SHIFT_FBUS  ; 11.162 ;    ;    ; 11.162 ;
+; SHL        ; SHIFT_FL    ; 11.772 ;    ;    ; 11.772 ;
+; SHR        ; GENERAL_WE  ; 11.040 ;    ;    ; 11.040 ;
+; SHR        ; SHIFT_FBUS  ; 10.953 ;    ;    ; 10.953 ;
+; SHR        ; SHIFT_FR    ; 10.760 ;    ;    ; 10.760 ;
+; SM         ; ALU_M       ; 10.735 ;    ;    ; 10.735 ;
+; SM         ; CF_EN       ; 11.838 ;    ;    ; 11.838 ;
+; SM         ; GENERAL_WE  ; 11.125 ;    ;    ; 11.125 ;
+; SM         ; PC_INC      ; 12.089 ;    ;    ; 12.089 ;
+; SM         ; PC_LD       ; 11.220 ;    ;    ; 11.220 ;
+; SM         ; RAM_CS      ; 11.588 ;    ;    ; 11.588 ;
+; SM         ; RAM_RL      ; 13.966 ;    ;    ; 13.966 ;
+; SM         ; RAM_WL      ; 14.020 ;    ;    ; 14.020 ;
+; SM         ; SHIFT_FBUS  ; 11.023 ;    ;    ; 11.023 ;
+; SM         ; SHIFT_FL    ; 11.636 ;    ;    ; 11.636 ;
+; SM         ; SHIFT_FR    ; 10.720 ;    ;    ; 10.720 ;
+; SM         ; ZF_EN       ; 12.300 ;    ;    ; 12.300 ;
+; SUB        ; ALU_M       ; 12.830 ;    ;    ; 12.830 ;
+; SUB        ; ALU_S[2]    ; 8.794  ;    ;    ; 8.794  ;
+; SUB        ; GENERAL_WE  ; 13.220 ;    ;    ; 13.220 ;
+; Z          ; PC_INC      ; 12.243 ;    ;    ; 12.243 ;
+; Z          ; PC_LD       ; 12.112 ;    ;    ; 12.112 ;
+; Z          ; ZF_EN       ; 12.455 ;    ;    ; 12.455 ;
++------------+-------------+--------+----+----+--------+
+
+
++------------------------------------------------------+
+; Minimum Propagation Delay                            ;
++------------+-------------+--------+----+----+--------+
+; Input Port ; Output Port ; RR     ; RF ; FR ; FF     ;
++------------+-------------+--------+----+----+--------+
+; ADD        ; ALU_M       ; 12.616 ;    ;    ; 12.616 ;
+; ADD        ; ALU_S[3]    ; 8.998  ;    ;    ; 8.998  ;
+; ADD        ; GENERAL_WE  ; 13.006 ;    ;    ; 13.006 ;
+; AND0       ; ALU_M       ; 8.187  ;    ;    ; 8.187  ;
+; AND0       ; ALU_S[1]    ; 4.895  ;    ;    ; 4.895  ;
+; AND0       ; GENERAL_WE  ; 8.577  ;    ;    ; 8.577  ;
+; C          ; CF_EN       ; 11.638 ;    ;    ; 11.638 ;
+; C          ; PC_INC      ; 12.367 ;    ;    ; 12.367 ;
+; C          ; PC_LD       ; 11.858 ;    ;    ; 11.858 ;
+; HALT       ; SM_EN       ; 9.421  ;    ;    ; 9.421  ;
+; JC         ; PC_INC      ; 11.347 ;    ;    ; 11.347 ;
+; JC         ; PC_LD       ; 11.660 ;    ;    ; 11.660 ;
+; JC         ; RAM_CS      ; 11.181 ;    ;    ; 11.181 ;
+; JC         ; RAM_RL      ; 13.559 ;    ;    ; 13.559 ;
+; JC         ; RAM_WL      ; 13.613 ;    ;    ; 13.613 ;
+; JMP        ; PC_LD       ; 10.170 ;    ;    ; 10.170 ;
+; JMP        ; RAM_CS      ; 10.536 ;    ;    ; 10.536 ;
+; JMP        ; RAM_RL      ; 12.914 ;    ;    ; 12.914 ;
+; JMP        ; RAM_WL      ; 12.968 ;    ;    ; 12.968 ;
+; JZ         ; PC_LD       ; 12.131 ;    ;    ; 12.131 ;
+; JZ         ; RAM_CS      ; 11.654 ;    ;    ; 11.654 ;
+; JZ         ; RAM_RL      ; 14.032 ;    ;    ; 14.032 ;
+; JZ         ; RAM_WL      ; 14.086 ;    ;    ; 14.086 ;
+; MOVA       ; GENERAL_WE  ; 11.179 ;    ;    ; 11.179 ;
+; MOVB       ; GENERAL_WE  ; 11.469 ;    ;    ; 11.469 ;
+; MOVB       ; RAM_WL      ; 10.753 ;    ;    ; 10.753 ;
+; MOVC       ; GENERAL_WE  ; 11.214 ;    ;    ; 11.214 ;
+; MOVC       ; RAM_RL      ; 11.977 ;    ;    ; 11.977 ;
+; NOT0       ; ALU_M       ; 7.775  ;    ;    ; 7.775  ;
+; NOT0       ; ALU_S[0]    ; 5.092  ;    ;    ; 5.092  ;
+; NOT0       ; GENERAL_WE  ; 8.165  ;    ;    ; 8.165  ;
+; SHL        ; GENERAL_WE  ; 11.251 ;    ;    ; 11.251 ;
+; SHL        ; SHIFT_FBUS  ; 11.162 ;    ;    ; 11.162 ;
+; SHL        ; SHIFT_FL    ; 11.772 ;    ;    ; 11.772 ;
+; SHR        ; GENERAL_WE  ; 11.040 ;    ;    ; 11.040 ;
+; SHR        ; SHIFT_FBUS  ; 10.953 ;    ;    ; 10.953 ;
+; SHR        ; SHIFT_FR    ; 10.760 ;    ;    ; 10.760 ;
+; SM         ; ALU_M       ; 10.735 ;    ;    ; 10.735 ;
+; SM         ; CF_EN       ; 11.838 ;    ;    ; 11.838 ;
+; SM         ; GENERAL_WE  ; 11.125 ;    ;    ; 11.125 ;
+; SM         ; PC_INC      ; 12.089 ;    ;    ; 12.089 ;
+; SM         ; PC_LD       ; 11.220 ;    ;    ; 11.220 ;
+; SM         ; RAM_CS      ; 11.588 ;    ;    ; 11.588 ;
+; SM         ; RAM_RL      ; 13.966 ;    ;    ; 13.966 ;
+; SM         ; RAM_WL      ; 14.020 ;    ;    ; 14.020 ;
+; SM         ; SHIFT_FBUS  ; 11.023 ;    ;    ; 11.023 ;
+; SM         ; SHIFT_FL    ; 11.636 ;    ;    ; 11.636 ;
+; SM         ; SHIFT_FR    ; 10.720 ;    ;    ; 10.720 ;
+; SM         ; ZF_EN       ; 12.300 ;    ;    ; 12.300 ;
+; SUB        ; ALU_M       ; 12.830 ;    ;    ; 12.830 ;
+; SUB        ; ALU_S[2]    ; 8.794  ;    ;    ; 8.794  ;
+; SUB        ; GENERAL_WE  ; 13.220 ;    ;    ; 13.220 ;
+; Z          ; PC_INC      ; 12.243 ;    ;    ; 12.243 ;
+; Z          ; PC_LD       ; 12.112 ;    ;    ; 12.112 ;
+; Z          ; ZF_EN       ; 12.455 ;    ;    ; 12.455 ;
++------------+-------------+--------+----+----+--------+
+
+
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 16    ; 16   ;
+; Unconstrained Input Port Paths  ; 55    ; 55   ;
+; Unconstrained Output Ports      ; 17    ; 17   ;
+; Unconstrained Output Port Paths ; 55    ; 55   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Mon Oct 28 23:59:44 2019
+Info: Command: quartus_sta execute -c execute
+Info: qsta_default_script.tcl version: #1
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'execute.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332159): No clocks to report
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 469 megabytes
+    Info: Processing ended: Mon Oct 28 23:59:46 2019
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

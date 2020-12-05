@@ -1,0 +1,7 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity execute is
+	port(MOVA, MOVB, MOVC, ADD, SUB, AND0,NOT0,
+		  SHR, SHL, JMP, JZ, JC,
+		  IN0, OUT0, NOP, HALT: in std_logic)

@@ -1,0 +1,496 @@
+Simulator report for ALUlap
+Thu Dec 19 17:29:03 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 284 nodes    ;
+; Simulation Coverage         ;      84.33 % ;
+; Total Number of Transitions ; 11794        ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone      ;
++-----------------------------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                         ;
++--------------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                       ; Default Value ;
++--------------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                                    ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                          ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                           ;               ;
+; Vector input source                                                                        ; C:/Users/lap/Downloads/Quartus/Projects/CPU/ALUlap/ALUlap.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                            ; On            ;
+; Check outputs                                                                              ; Off                                                           ; Off           ;
+; Report simulation coverage                                                                 ; On                                                            ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                            ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                            ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                            ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                           ; Off           ;
+; Detect glitches                                                                            ; Off                                                           ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                           ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                           ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                           ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                           ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                            ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                    ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                           ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                           ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                          ; Auto          ;
++--------------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      84.33 % ;
+; Total nodes checked                                 ; 284          ;
+; Total output ports checked                          ; 300          ;
+; Total output ports with complete 1/0-value coverage ; 253          ;
+; Total output ports with no 1/0-value coverage       ; 34           ;
+; Total output ports with no 1-value coverage         ; 37           ;
+; Total output ports with no 0-value coverage         ; 44           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                       ;
++-----------------------------------------------------------------------------+----------------------------------------------------------------------------------+------------------+
+; Node Name                                                                   ; Output Port Name                                                                 ; Output Port Type ;
++-----------------------------------------------------------------------------+----------------------------------------------------------------------------------+------------------+
+; |ALUlap|process_0~0                                                         ; |ALUlap|process_0~0                                                              ; out0             ;
+; |ALUlap|process_0~1                                                         ; |ALUlap|process_0~1                                                              ; out0             ;
+; |ALUlap|process_0~2                                                         ; |ALUlap|process_0~2                                                              ; out0             ;
+; |ALUlap|temp~0                                                              ; |ALUlap|temp~0                                                                   ; out0             ;
+; |ALUlap|temp~1                                                              ; |ALUlap|temp~1                                                                   ; out0             ;
+; |ALUlap|temp~3                                                              ; |ALUlap|temp~3                                                                   ; out0             ;
+; |ALUlap|temp~4                                                              ; |ALUlap|temp~4                                                                   ; out0             ;
+; |ALUlap|temp~5                                                              ; |ALUlap|temp~5                                                                   ; out0             ;
+; |ALUlap|temp~6                                                              ; |ALUlap|temp~6                                                                   ; out0             ;
+; |ALUlap|process_0~3                                                         ; |ALUlap|process_0~3                                                              ; out0             ;
+; |ALUlap|temp~8                                                              ; |ALUlap|temp~8                                                                   ; out0             ;
+; |ALUlap|temp~9                                                              ; |ALUlap|temp~9                                                                   ; out0             ;
+; |ALUlap|temp~11                                                             ; |ALUlap|temp~11                                                                  ; out0             ;
+; |ALUlap|temp~12                                                             ; |ALUlap|temp~12                                                                  ; out0             ;
+; |ALUlap|temp~13                                                             ; |ALUlap|temp~13                                                                  ; out0             ;
+; |ALUlap|process_0~4                                                         ; |ALUlap|process_0~4                                                              ; out0             ;
+; |ALUlap|temp~18                                                             ; |ALUlap|temp~18                                                                  ; out              ;
+; |ALUlap|temp~19                                                             ; |ALUlap|temp~19                                                                  ; out              ;
+; |ALUlap|temp~20                                                             ; |ALUlap|temp~20                                                                  ; out              ;
+; |ALUlap|temp~21                                                             ; |ALUlap|temp~21                                                                  ; out              ;
+; |ALUlap|temp~22                                                             ; |ALUlap|temp~22                                                                  ; out              ;
+; |ALUlap|temp~23                                                             ; |ALUlap|temp~23                                                                  ; out              ;
+; |ALUlap|temp~24                                                             ; |ALUlap|temp~24                                                                  ; out              ;
+; |ALUlap|temp~25                                                             ; |ALUlap|temp~25                                                                  ; out              ;
+; |ALUlap|temp~26                                                             ; |ALUlap|temp~26                                                                  ; out              ;
+; |ALUlap|temp~27                                                             ; |ALUlap|temp~27                                                                  ; out              ;
+; |ALUlap|temp~28                                                             ; |ALUlap|temp~28                                                                  ; out              ;
+; |ALUlap|temp~29                                                             ; |ALUlap|temp~29                                                                  ; out              ;
+; |ALUlap|temp~30                                                             ; |ALUlap|temp~30                                                                  ; out              ;
+; |ALUlap|temp~31                                                             ; |ALUlap|temp~31                                                                  ; out              ;
+; |ALUlap|temp~32                                                             ; |ALUlap|temp~32                                                                  ; out              ;
+; |ALUlap|temp~33                                                             ; |ALUlap|temp~33                                                                  ; out              ;
+; |ALUlap|temp~34                                                             ; |ALUlap|temp~34                                                                  ; out              ;
+; |ALUlap|temp~35                                                             ; |ALUlap|temp~35                                                                  ; out              ;
+; |ALUlap|temp~36                                                             ; |ALUlap|temp~36                                                                  ; out              ;
+; |ALUlap|temp~37                                                             ; |ALUlap|temp~37                                                                  ; out              ;
+; |ALUlap|temp~38                                                             ; |ALUlap|temp~38                                                                  ; out              ;
+; |ALUlap|temp~39                                                             ; |ALUlap|temp~39                                                                  ; out              ;
+; |ALUlap|temp~40                                                             ; |ALUlap|temp~40                                                                  ; out              ;
+; |ALUlap|temp~41                                                             ; |ALUlap|temp~41                                                                  ; out              ;
+; |ALUlap|temp~42                                                             ; |ALUlap|temp~42                                                                  ; out              ;
+; |ALUlap|temp~43                                                             ; |ALUlap|temp~43                                                                  ; out              ;
+; |ALUlap|temp~44                                                             ; |ALUlap|temp~44                                                                  ; out              ;
+; |ALUlap|temp~45                                                             ; |ALUlap|temp~45                                                                  ; out              ;
+; |ALUlap|temp~46                                                             ; |ALUlap|temp~46                                                                  ; out              ;
+; |ALUlap|temp~47                                                             ; |ALUlap|temp~47                                                                  ; out              ;
+; |ALUlap|temp~48                                                             ; |ALUlap|temp~48                                                                  ; out              ;
+; |ALUlap|temp~49                                                             ; |ALUlap|temp~49                                                                  ; out              ;
+; |ALUlap|temp~50                                                             ; |ALUlap|temp~50                                                                  ; out              ;
+; |ALUlap|temp~51                                                             ; |ALUlap|temp~51                                                                  ; out              ;
+; |ALUlap|temp~52                                                             ; |ALUlap|temp~52                                                                  ; out              ;
+; |ALUlap|temp~53                                                             ; |ALUlap|temp~53                                                                  ; out              ;
+; |ALUlap|temp~54                                                             ; |ALUlap|temp~54                                                                  ; out              ;
+; |ALUlap|temp~55                                                             ; |ALUlap|temp~55                                                                  ; out              ;
+; |ALUlap|temp~56                                                             ; |ALUlap|temp~56                                                                  ; out              ;
+; |ALUlap|temp~57                                                             ; |ALUlap|temp~57                                                                  ; out              ;
+; |ALUlap|temp~58                                                             ; |ALUlap|temp~58                                                                  ; out              ;
+; |ALUlap|temp~59                                                             ; |ALUlap|temp~59                                                                  ; out              ;
+; |ALUlap|temp~60                                                             ; |ALUlap|temp~60                                                                  ; out              ;
+; |ALUlap|temp~61                                                             ; |ALUlap|temp~61                                                                  ; out              ;
+; |ALUlap|temp~62                                                             ; |ALUlap|temp~62                                                                  ; out              ;
+; |ALUlap|temp~63                                                             ; |ALUlap|temp~63                                                                  ; out              ;
+; |ALUlap|temp~64                                                             ; |ALUlap|temp~64                                                                  ; out              ;
+; |ALUlap|temp~65                                                             ; |ALUlap|temp~65                                                                  ; out              ;
+; |ALUlap|A[0]                                                                ; |ALUlap|A[0]                                                                     ; out              ;
+; |ALUlap|A[1]                                                                ; |ALUlap|A[1]                                                                     ; out              ;
+; |ALUlap|A[2]                                                                ; |ALUlap|A[2]                                                                     ; out              ;
+; |ALUlap|A[3]                                                                ; |ALUlap|A[3]                                                                     ; out              ;
+; |ALUlap|A[4]                                                                ; |ALUlap|A[4]                                                                     ; out              ;
+; |ALUlap|A[5]                                                                ; |ALUlap|A[5]                                                                     ; out              ;
+; |ALUlap|B[0]                                                                ; |ALUlap|B[0]                                                                     ; out              ;
+; |ALUlap|B[1]                                                                ; |ALUlap|B[1]                                                                     ; out              ;
+; |ALUlap|B[2]                                                                ; |ALUlap|B[2]                                                                     ; out              ;
+; |ALUlap|B[3]                                                                ; |ALUlap|B[3]                                                                     ; out              ;
+; |ALUlap|B[4]                                                                ; |ALUlap|B[4]                                                                     ; out              ;
+; |ALUlap|B[5]                                                                ; |ALUlap|B[5]                                                                     ; out              ;
+; |ALUlap|B[6]                                                                ; |ALUlap|B[6]                                                                     ; out              ;
+; |ALUlap|S[0]                                                                ; |ALUlap|S[0]                                                                     ; out              ;
+; |ALUlap|S[1]                                                                ; |ALUlap|S[1]                                                                     ; out              ;
+; |ALUlap|S[2]                                                                ; |ALUlap|S[2]                                                                     ; out              ;
+; |ALUlap|S[3]                                                                ; |ALUlap|S[3]                                                                     ; out              ;
+; |ALUlap|T[0]                                                                ; |ALUlap|T[0]                                                                     ; pin_out          ;
+; |ALUlap|T[1]                                                                ; |ALUlap|T[1]                                                                     ; pin_out          ;
+; |ALUlap|T[2]                                                                ; |ALUlap|T[2]                                                                     ; pin_out          ;
+; |ALUlap|T[3]                                                                ; |ALUlap|T[3]                                                                     ; pin_out          ;
+; |ALUlap|T[4]                                                                ; |ALUlap|T[4]                                                                     ; pin_out          ;
+; |ALUlap|T[5]                                                                ; |ALUlap|T[5]                                                                     ; pin_out          ;
+; |ALUlap|T[6]                                                                ; |ALUlap|T[6]                                                                     ; pin_out          ;
+; |ALUlap|T[7]                                                                ; |ALUlap|T[7]                                                                     ; pin_out          ;
+; |ALUlap|CF                                                                  ; |ALUlap|CF                                                                       ; pin_out          ;
+; |ALUlap|ZF                                                                  ; |ALUlap|ZF                                                                       ; pin_out          ;
+; |ALUlap|Equal0~0                                                            ; |ALUlap|Equal0~0                                                                 ; out0             ;
+; |ALUlap|Equal1~0                                                            ; |ALUlap|Equal1~0                                                                 ; out0             ;
+; |ALUlap|Equal2~0                                                            ; |ALUlap|Equal2~0                                                                 ; out0             ;
+; |ALUlap|Equal3~0                                                            ; |ALUlap|Equal3~0                                                                 ; out0             ;
+; |ALUlap|Equal4~0                                                            ; |ALUlap|Equal4~0                                                                 ; out0             ;
+; |ALUlap|Equal5~0                                                            ; |ALUlap|Equal5~0                                                                 ; out0             ;
+; |ALUlap|Equal6~0                                                            ; |ALUlap|Equal6~0                                                                 ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|result_node[1]                                     ; |ALUlap|lpm_add_sub:Add1|result_node[1]                                          ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|result_node[2]                                     ; |ALUlap|lpm_add_sub:Add1|result_node[2]                                          ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|result_node[3]                                     ; |ALUlap|lpm_add_sub:Add1|result_node[3]                                          ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|result_node[4]                                     ; |ALUlap|lpm_add_sub:Add1|result_node[4]                                          ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|result_node[5]                                     ; |ALUlap|lpm_add_sub:Add1|result_node[5]                                          ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|result_node[6]                                     ; |ALUlap|lpm_add_sub:Add1|result_node[6]                                          ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|result_node[7]                                     ; |ALUlap|lpm_add_sub:Add1|result_node[7]                                          ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|result_node[8]                                     ; |ALUlap|lpm_add_sub:Add1|result_node[8]                                          ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|result_node[9]                                     ; |ALUlap|lpm_add_sub:Add1|result_node[9]                                          ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[7]                        ; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[7]                             ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[6]                        ; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[6]                             ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[5]                        ; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[5]                             ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[4]                        ; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[4]                             ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[3]                        ; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[3]                             ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[2]                        ; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[2]                             ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[1]                        ; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[1]                             ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[7]~3                  ; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[7]~3                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[6]~4                  ; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[6]~4                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[5]~5                  ; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[5]~5                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[4]~6                  ; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[4]~6                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[3]~7                  ; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[3]~7                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[2]~8                  ; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[2]~8                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[1]~9                  ; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[1]~9                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[9]                    ; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[9]                         ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[8]                    ; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[8]                         ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[7]                    ; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[7]                         ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[6]                    ; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[6]                         ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[5]                    ; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[5]                         ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[4]                    ; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[4]                         ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[3]                    ; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[3]                         ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[2]                    ; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[2]                         ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[1]                    ; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[1]                         ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~7                                  ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~7                                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~8                                  ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~8                                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~9                                  ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~9                                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~10                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~10                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~11                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~11                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~12                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~12                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~15                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~15                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~16                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~16                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~17                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~17                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~18                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~18                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~19                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~19                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~20                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~20                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~21                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~21                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~23                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~23                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~24                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~24                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~25                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~25                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~26                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~26                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~27                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~27                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~28                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~28                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~29                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~29                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~30                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~30                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~32                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~32                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~33                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~33                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~34                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~34                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~35                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~35                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~36                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~36                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~37                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~37                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~38                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~38                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~39                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~39                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[9] ; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[9]      ; sout             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[8] ; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[8]~COUT ; cout             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[8] ; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[8]      ; sout             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[7] ; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]~COUT ; cout             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[7] ; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]      ; sout             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[6] ; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]~COUT ; cout             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[6] ; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]      ; sout             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[5] ; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]~COUT ; cout             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[5] ; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]      ; sout             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[4] ; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]~COUT ; cout             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[4] ; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]      ; sout             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[3] ; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]~COUT ; cout             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[3] ; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]      ; sout             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[2] ; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]~COUT ; cout             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[2] ; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]      ; sout             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~COUT ; cout             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]      ; sout             ;
+; |ALUlap|lpm_add_sub:Add0|result_node[0]                                     ; |ALUlap|lpm_add_sub:Add0|result_node[0]                                          ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|result_node[1]                                     ; |ALUlap|lpm_add_sub:Add0|result_node[1]                                          ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|result_node[2]                                     ; |ALUlap|lpm_add_sub:Add0|result_node[2]                                          ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|result_node[3]                                     ; |ALUlap|lpm_add_sub:Add0|result_node[3]                                          ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|result_node[4]                                     ; |ALUlap|lpm_add_sub:Add0|result_node[4]                                          ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|result_node[5]                                     ; |ALUlap|lpm_add_sub:Add0|result_node[5]                                          ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|result_node[6]                                     ; |ALUlap|lpm_add_sub:Add0|result_node[6]                                          ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|result_node[7]                                     ; |ALUlap|lpm_add_sub:Add0|result_node[7]                                          ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|result_node[8]                                     ; |ALUlap|lpm_add_sub:Add0|result_node[8]                                          ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|datab_node[0]                        ; |ALUlap|lpm_add_sub:Add0|addcore:adder|datab_node[0]                             ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]~0                  ; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]~0                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]                    ; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]                         ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~0                                  ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~0                                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~1                                  ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~1                                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~3                                  ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~3                                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|datab_node[6]                        ; |ALUlap|lpm_add_sub:Add0|addcore:adder|datab_node[6]                             ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|datab_node[5]                        ; |ALUlap|lpm_add_sub:Add0|addcore:adder|datab_node[5]                             ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|datab_node[4]                        ; |ALUlap|lpm_add_sub:Add0|addcore:adder|datab_node[4]                             ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|datab_node[3]                        ; |ALUlap|lpm_add_sub:Add0|addcore:adder|datab_node[3]                             ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|datab_node[2]                        ; |ALUlap|lpm_add_sub:Add0|addcore:adder|datab_node[2]                             ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|datab_node[1]                        ; |ALUlap|lpm_add_sub:Add0|addcore:adder|datab_node[1]                             ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[6]~3                  ; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[6]~3                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[5]~4                  ; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[5]~4                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[4]~5                  ; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[4]~5                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]~6                  ; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]~6                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[2]~7                  ; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[2]~7                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]~8                  ; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]~8                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[8]                    ; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[8]                         ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[7]                    ; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[7]                         ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[6]                    ; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[6]                         ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[5]                    ; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[5]                         ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[4]                    ; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[4]                         ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]                    ; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]                         ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[2]                    ; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[2]                         ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]                    ; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]                         ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~6                                  ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~6                                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~7                                  ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~7                                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~8                                  ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~8                                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~9                                  ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~9                                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~10                                 ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~10                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~11                                 ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~11                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~15                                 ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~15                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~16                                 ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~16                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~17                                 ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~17                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~18                                 ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~18                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~19                                 ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~19                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~21                                 ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~21                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~22                                 ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~22                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~23                                 ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~23                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~24                                 ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~24                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~25                                 ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~25                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~26                                 ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~26                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~27                                 ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~27                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~29                                 ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~29                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~30                                 ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~30                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~31                                 ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~31                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~32                                 ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~32                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~33                                 ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~33                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~34                                 ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~34                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~35                                 ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~35                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[8] ; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[8]      ; sout             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[7] ; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]~COUT ; cout             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[7] ; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]      ; sout             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6] ; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]~COUT ; cout             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6] ; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]      ; sout             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5] ; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]~COUT ; cout             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5] ; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]      ; sout             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4] ; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]~COUT ; cout             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4] ; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]      ; sout             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3] ; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]~COUT ; cout             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3] ; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]      ; sout             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2] ; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]~COUT ; cout             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2] ; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]      ; sout             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~COUT ; cout             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]      ; sout             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~COUT ; cout             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |ALUlap|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]      ; sout             ;
++-----------------------------------------------------------------------------+----------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                          ;
++-----------------------------------------------------------------------------+----------------------------------------------------------------------------------+------------------+
+; Node Name                                                                   ; Output Port Name                                                                 ; Output Port Type ;
++-----------------------------------------------------------------------------+----------------------------------------------------------------------------------+------------------+
+; |ALUlap|temp~2                                                              ; |ALUlap|temp~2                                                                   ; out0             ;
+; |ALUlap|temp~7                                                              ; |ALUlap|temp~7                                                                   ; out0             ;
+; |ALUlap|temp~10                                                             ; |ALUlap|temp~10                                                                  ; out0             ;
+; |ALUlap|process_0~5                                                         ; |ALUlap|process_0~5                                                              ; out0             ;
+; |ALUlap|temp~16                                                             ; |ALUlap|temp~16                                                                  ; out              ;
+; |ALUlap|A[7]                                                                ; |ALUlap|A[7]                                                                     ; out              ;
+; |ALUlap|M                                                                   ; |ALUlap|M                                                                        ; out              ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[0]~0                      ; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[0]~0                           ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[0]                        ; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[0]                             ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[0]~0                  ; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[0]~0                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[0]                    ; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[0]                         ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~0                                  ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~0                                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~1                                  ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~1                                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~2                                  ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~2                                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~3                                  ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~3                                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[9]~1                      ; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[9]~1                           ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[9]                        ; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[9]                             ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[8]                        ; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[8]                             ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[9]~1                  ; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[9]~1                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[8]~2                  ; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[8]~2                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~4                                  ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~4                                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~5                                  ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~5                                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~13                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~13                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~14                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~14                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~22                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~22                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~31                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~31                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~COUT ; cout             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|datab_node[0]~0                      ; |ALUlap|lpm_add_sub:Add0|addcore:adder|datab_node[0]~0                           ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~2                                  ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~2                                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|datab_node[8]~1                      ; |ALUlap|lpm_add_sub:Add0|addcore:adder|datab_node[8]~1                           ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|datab_node[8]                        ; |ALUlap|lpm_add_sub:Add0|addcore:adder|datab_node[8]                             ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[8]~1                  ; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[8]~1                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~4                                  ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~4                                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~5                                  ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~5                                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~12                                 ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~12                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~20                                 ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~20                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~28                                 ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~28                                      ; out0             ;
++-----------------------------------------------------------------------------+----------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                          ;
++-----------------------------------------------------------------------------+----------------------------------------------------------------------------------+------------------+
+; Node Name                                                                   ; Output Port Name                                                                 ; Output Port Type ;
++-----------------------------------------------------------------------------+----------------------------------------------------------------------------------+------------------+
+; |ALUlap|temp~2                                                              ; |ALUlap|temp~2                                                                   ; out0             ;
+; |ALUlap|temp~7                                                              ; |ALUlap|temp~7                                                                   ; out0             ;
+; |ALUlap|temp~10                                                             ; |ALUlap|temp~10                                                                  ; out0             ;
+; |ALUlap|temp~14                                                             ; |ALUlap|temp~14                                                                  ; out0             ;
+; |ALUlap|temp~15                                                             ; |ALUlap|temp~15                                                                  ; out0             ;
+; |ALUlap|process_0~5                                                         ; |ALUlap|process_0~5                                                              ; out0             ;
+; |ALUlap|temp~16                                                             ; |ALUlap|temp~16                                                                  ; out              ;
+; |ALUlap|temp~17                                                             ; |ALUlap|temp~17                                                                  ; out              ;
+; |ALUlap|A[6]                                                                ; |ALUlap|A[6]                                                                     ; out              ;
+; |ALUlap|A[7]                                                                ; |ALUlap|A[7]                                                                     ; out              ;
+; |ALUlap|B[7]                                                                ; |ALUlap|B[7]                                                                     ; out              ;
+; |ALUlap|M                                                                   ; |ALUlap|M                                                                        ; out              ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[0]~0                      ; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[0]~0                           ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[0]                        ; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[0]                             ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[0]~0                  ; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[0]~0                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[0]                    ; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[0]                         ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~0                                  ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~0                                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~1                                  ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~1                                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~2                                  ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~2                                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~3                                  ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~3                                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[9]~1                      ; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[9]~1                           ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[9]                        ; |ALUlap|lpm_add_sub:Add1|addcore:adder|datab_node[9]                             ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[9]~1                  ; |ALUlap|lpm_add_sub:Add1|addcore:adder|unreg_res_node[9]~1                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~4                                  ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~4                                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~5                                  ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~5                                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~6                                  ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~6                                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~13                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~13                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~22                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~22                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~31                                 ; |ALUlap|lpm_add_sub:Add1|addcore:adder|_~31                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |ALUlap|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~COUT ; cout             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|datab_node[0]~0                      ; |ALUlap|lpm_add_sub:Add0|addcore:adder|datab_node[0]~0                           ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~2                                  ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~2                                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|datab_node[8]~1                      ; |ALUlap|lpm_add_sub:Add0|addcore:adder|datab_node[8]~1                           ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|datab_node[8]                        ; |ALUlap|lpm_add_sub:Add0|addcore:adder|datab_node[8]                             ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|datab_node[7]                        ; |ALUlap|lpm_add_sub:Add0|addcore:adder|datab_node[7]                             ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[8]~1                  ; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[8]~1                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[7]~2                  ; |ALUlap|lpm_add_sub:Add0|addcore:adder|unreg_res_node[7]~2                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~4                                  ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~4                                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~5                                  ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~5                                       ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~12                                 ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~12                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~13                                 ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~13                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~14                                 ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~14                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~20                                 ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~20                                      ; out0             ;
+; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~28                                 ; |ALUlap|lpm_add_sub:Add0|addcore:adder|_~28                                      ; out0             ;
++-----------------------------------------------------------------------------+----------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Thu Dec 19 17:29:02 2019
+Info: Command: quartus_sim --simulation_results_format=VWF ALUlap -c ALUlap
+Info (324025): Using vector source file "C:/Users/lap/Downloads/Quartus/Projects/CPU/ALUlap/ALUlap.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      84.33 %
+Info (328052): Number of transitions in simulation is 11794
+Info (324045): Vector file ALUlap.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 374 megabytes
+    Info: Processing ended: Thu Dec 19 17:29:03 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

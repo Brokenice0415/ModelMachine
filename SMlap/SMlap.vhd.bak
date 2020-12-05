@@ -1,0 +1,50 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity SMlap is
+	port(CLK, EN: in std_logic;
+		  SM: out std_logic);
+end SMlap;
+
+architecture struct of SMlap is
+	type state_type is (A, B);
+	signal state, next_state: state_type;
+	begin
+	
+	
+	next_state_func: process(state, CLK, EN)
+	begin
+	if(EN = '0')then
+		next_state <= state;
+	elsif(CLK'event and CLK = '0')then
+		case state is
+			when A =>
+				next_state <= B;
+			when B =>
+				next_state <= A;
+		end case;
+	end if;
+	end process;
+	
+	output_func: process(state, CLK, EN)
+	begin
+	if(EN = '0')then
+		case state is
+			when A =>
+				SM <= 0;
+			when B =>
+				SM <= 0;
+		end case;
+	elsif(CLK'event and CLK = '0')then
+		case state is
+			when A =>
+				SM <= 1;
+			when B =>
+				SM <= 0;
+		end case;
+	end if;
+	end process;
+
+end struct;
+	
+		

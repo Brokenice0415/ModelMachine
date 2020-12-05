@@ -1,0 +1,31 @@
+|PClap
+LD_PC => process_0~1.IN0
+LD_PC => process_0~0.IN0
+IN_PC => process_0~0.IN1
+IN_PC => process_0~1.IN1
+CLK => prevPC[0].CLK
+CLK => prevPC[1].CLK
+CLK => prevPC[2].CLK
+CLK => prevPC[3].CLK
+CLK => prevPC[4].CLK
+CLK => prevPC[5].CLK
+CLK => prevPC[6].CLK
+CLK => prevPC[7].CLK
+Ci[0] => prevPC~7.DATAB
+Ci[1] => prevPC~6.DATAB
+Ci[2] => prevPC~5.DATAB
+Ci[3] => prevPC~4.DATAB
+Ci[4] => prevPC~3.DATAB
+Ci[5] => prevPC~2.DATAB
+Ci[6] => prevPC~1.DATAB
+Ci[7] => prevPC~0.DATAB
+Co[0] <= prevPC[0].DB_MAX_OUTPUT_PORT_TYPE
+Co[1] <= prevPC[1].DB_MAX_OUTPUT_PORT_TYPE
+Co[2] <= prevPC[2].DB_MAX_OUTPUT_PORT_TYPE
+Co[3] <= prevPC[3].DB_MAX_OUTPUT_PORT_TYPE
+Co[4] <= prevPC[4].DB_MAX_OUTPUT_PORT_TYPE
+Co[5] <= prevPC[5].DB_MAX_OUTPUT_PORT_TYPE
+Co[6] <= prevPC[6].DB_MAX_OUTPUT_PORT_TYPE
+Co[7] <= prevPC[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
